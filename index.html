@@ -7,125 +7,54 @@
 <style>
     * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; }
-  body { 
-    background:#0a0a0a; 
-    color:#fff; 
-    font-family: 'Segoe UI', sans-serif; 
-    position:relative; 
-  }
-
-  /* KEEP YOUR LOGO BACKGROUND EXACTLY LIKE THIS */
-  .page-bg-logo {
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:120vw;
-    height:120vh;
-    max-width:none;
-    object-fit:cover;
-    opacity:0.20;
-    z-index:0;
-    pointer-events:none;
-    filter: brightness(1.5) drop-shadow(0 0 50px rgba(212,175,55,0.4));
-  }
-
+  body { background:#0a0a0a; color:#fff; font-family: 'Segoe UI', sans-serif; position:relative; }
+  .page-bg-logo { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); width:120vw; height:120vh; max-width:none; object-fit:cover; opacity:0.20; z-index:0; pointer-events:none; filter: brightness(1.5) drop-shadow(0 0 50px rgba(212,175,55,0.4)); }
   .content { position:relative; z-index:2; }
   .section { min-height:100vh; padding:120px 20px; max-width:1000px; margin:0 auto; text-align:center; }
   .section-title { font-size:44px; color:#D4AF37; margin-bottom:50px; letter-spacing:4px; font-weight:700; text-shadow:0 0 25px rgba(212,175,55,0.4); }
-
-  /* ABOUT ME WITH BUSINESSMAN PIC */
   .about-grid { display:flex; gap:50px; align-items:center; text-align:left; flex-wrap:wrap; justify-content:center; }
-  .about-img {
-    width:350px; height:350px; border-radius:20px;
-    border:4px solid #D4AF37; object-fit:cover;
-    box-shadow:0 0 50px rgba(212,175,55,0.5);
-  }
+  .about-img { width:350px; height:350px; border-radius:20px; border:4px solid #D4AF37; object-fit:cover; box-shadow:0 0 50px rgba(212,175,55,0.5); }
   .about-text { flex:1; min-width:300px; }
   .about-text p { font-size:18px; line-height:1.9; color:#eee; margin-bottom:20px; }
-  .quote { 
-    font-size:22px; font-style:italic; color:#D4AF37; 
-    border-left:4px solid #D4AF37; padding-left:20px; margin:30px 0;
-  }
-
-  /* NEW VIDEO SECTION */
-  .video-wrapper {
-    max-width:900px;
-    margin:0 auto;
-    border:3px solid #D4AF37;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 0 50px rgba(212,175,55,0.4);
-  }
-  .video-wrapper iframe {
-    width:100%;
-    height:500px;
-    border:none;
-    display:block;
-  }
-
-  /* TESTIMONIALS */
+  .quote { font-size:22px; font-style:italic; color:#D4AF37; border-left:4px solid #D4AF37; padding-left:20px; margin:30px 0; }
+  .video-wrapper { max-width:900px; margin:0 auto; border:3px solid #D4AF37; border-radius:20px; overflow:hidden; box-shadow:0 0 50px rgba(212,175,55,0.4); }
+  .video-wrapper iframe { width:100%; height:500px; border:none; display:block; }
   .testimonial-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; }
-  .testimonial-card {
-    background:rgba(20,20,20,0.8); border:1px solid #D4AF37; 
-    border-radius:16px; padding:30px; text-align:left;
-    backdrop-filter: blur(8px);
-  }
+  .testimonial-card { background:rgba(20,20,20,0.8); border:1px solid #D4AF37; border-radius:16px; padding:30px; text-align:left; backdrop-filter: blur(8px); }
   .testimonial-card .stars { color:#D4AF37; font-size:20px; margin-bottom:15px; }
   .testimonial-card p { font-size:16px; color:#ddd; line-height:1.7; margin-bottom:15px; }
   .testimonial-card .client { color:#D4AF37; font-weight:700; }
-
-  /* CONTACT */
-  .contact-box { 
-    background:rgba(18,18,18,0.9); border:2px solid #D4AF37; 
-    border-radius:20px; padding:50px 30px; max-width:600px; margin:0 auto;
-  }
+  .contact-box { background:rgba(18,18,18,0.9); border:2px solid #D4AF37; border-radius:20px; padding:50px 30px; max-width:600px; margin:0 auto; }
   .contact-item { font-size:18px; margin:20px 0; color:#ddd; }
-  .wa-btn { 
-    display:inline-block; background:linear-gradient(45deg, #25D366, #1EBE57); color:#fff; 
-    padding:20px 55px; border-radius:50px; text-decoration:none; 
-    font-weight:800; font-size:18px; margin-top:30px; transition:0.3s;
-  }
+  .wa-btn { display:inline-block; background:linear-gradient(45deg, #25D366, #1EBE57); color:#fff; padding:20px 55px; border-radius:50px; text-decoration:none; font-weight:800; font-size:18px; margin-top:30px; transition:0.3s; }
   .wa-btn:hover { transform:scale(1.05); box-shadow:0 0 30px rgba(37,211,102,0.7); }
   .footer { text-align:center; padding:40px 20px; color:#555; font-size:13px; border-top:1px solid #222; }
-  
-  @media(max-width:768px){
-    .video-wrapper iframe{height:250px;}
-  }
+  @media(max-width:768px){ .video-wrapper iframe{height:250px;} }
 </style>
 </head>
 <body>
 
-<!-- YOUR LOGO BACKGROUND - KEEPING IT EXACTLY LIKE SCREENSHOT -->
 <img src="1000064284.png" class="page-bg-logo" alt="Davids Luxe Estate">
 
 <div class="content">
-
-  <!-- SECTION 1: ABOUT ME WITH PIC + QUOTE -->
   <div class="section">
     <h2 class="section-title">ABOUT ME</h2>
     <div class="about-grid">
       <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887" class="about-img" alt="CEO David">
-      
       <div class="about-text">
         <p>I'm <strong>David</strong>, Founder & CEO of <strong>DAVIDS LUXE ESTATE</strong>.</p>
-        <p>For 8+ years I've specialized in luxury real estate across Lagos, Lekki, and London. We don't just sell properties, we build legacies.</p>
-        
-        <div class="quote">
-          "Luxury is not a place, it's an experience. My job is to find you the key."
-        </div>
-        
+        <p>For 8+ years I've specialized in luxury real estate across Lagos, Lekki, and London.</p>
+        <div class="quote">"Luxury is not a place, it's an experience. My job is to find you the key."</div>
         <p><strong style="color:#D4AF37;">PREMIUM PROPERTIES • TRUSTED & RELIABLE • SMART INVESTMENT</strong></p>
       </div>
     </div>
   </div>
 
-  <!-- SECTION 2: NEW YOUTUBE VIDEO - LUXURY HOUSES ON THE ISLAND -->
+  <!-- WORKING VIDEO SECTION -->
   <div class="section">
     <h2 class="section-title">LUXURY ON THE ISLAND</h2>
     <div class="video-wrapper">
-      <!-- REPLACE VIDEO ID WITH YOUR PREFERRED VIDEO -->
-      <iframe src="https://www.youtube.com/embed/BHACKCNDMWg" 
+      <iframe src="https://www.youtube.com/embed/U0qF2eB2k3Q" 
       title="Luxury Houses Lagos" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen></iframe>
@@ -133,33 +62,15 @@
     <p style="color:#aaa; margin-top:20px; font-size:16px;">Tour some of the finest luxury properties in Lagos Island & Banana Island</p>
   </div>
 
-  <!-- SECTION 3: TESTIMONIALS -->
   <div class="section">
     <h2 class="section-title">CLIENT TESTIMONIALS</h2>
     <div class="testimonial-grid">
-      
-      <div class="testimonial-card">
-        <div class="stars">★★★</div>
-        <p>"David found us a luxury duplex in Lekki that exceeded everything we wanted. Professional, discreet, and fast."</p>
-        <div class="client">- Mr. & Mrs. Adebayo, Lagos</div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="stars">★★★</div>
-        <p>"I was looking for investment property in London. David handled everything remotely. Seamless process."</p>
-        <div class="client">- James O., UK Investor</div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="stars">★★★</div>
-        <p>"The level of service is unmatched. From viewing to closing, David made it effortless."</p>
-        <div class="client">- Sarah K., Victoria Island</div>
-      </div>
-
+      <div class="testimonial-card"><div class="stars">★★★★★</div><p>"David found us a luxury duplex in Lekki that exceeded everything we wanted."</p><div class="client">- Mr. & Mrs. Adebayo, Lagos</div></div>
+      <div class="testimonial-card"><div class="stars">★★★</div><p>"I was looking for investment property in London. David handled everything remotely."</p><div class="client">- James O., UK Investor</div></div>
+      <div class="testimonial-card"><div class="stars">★★★</div><p>"The level of service is unmatched. From viewing to closing, David made it effortless."</p><div class="client">- Sarah K., Victoria Island</div></div>
     </div>
   </div>
 
-  <!-- SECTION 4: CONTACT -->
   <div class="section">
     <h2 class="section-title">GET IN TOUCH</h2>
     <div class="contact-box">
@@ -169,12 +80,9 @@
       <a href="https://wa.me/2347026558433" target="_blank" class="wa-btn">💬 WHATSAPP DAVID NOW</a>
     </div>
   </div>
-
 </div>
 
-<div class="footer">
-  © 2026 DAVIDS LUXE ESTATE. Where Luxury Meets Lifestyle.
-</div>
+<div class="footer">© 2026 DAVIDS LUXE ESTATE. Where Luxury Meets Lifestyle.</div>
 
 </body>
 </html>
