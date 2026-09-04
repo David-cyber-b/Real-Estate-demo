@@ -20,8 +20,8 @@
   
   /* VIDEO SECTION */
   .video-wrapper { max-width:900px; margin:0 auto; border:3px solid #D4AF37; border-radius:20px; overflow:hidden; box-shadow:0 0 50px rgba(212,175,55,0.4); }
-  .video-wrapper video { width:100%; height:auto; display:block; border-radius:16px; }
-  .unmute-hint { color:#D4AF37; margin-top:12px; font-size:14px; font-weight:600; letter-spacing:1px; } /* NEW */
+  .video-wrapper video { width:100%; height:auto; display:block; border-radius:16px; background:#000; }
+  .unmute-hint { color:#D4AF37; margin-top:12px; font-size:14px; font-weight:600; letter-spacing:1px; }
 
   .testimonial-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; }
   .testimonial-card { background:rgba(20,20,20,0.8); border:1px solid #D4AF37; border-radius:16px; padding:30px; text-align:left; backdrop-filter: blur(8px); }
@@ -30,7 +30,12 @@
   .testimonial-card .client { color:#D4AF37; font-weight:700; }
   .contact-box { background:rgba(18,18,18,0.9); border:2px solid #D4AF37; border-radius:20px; padding:50px 30px; max-width:600px; margin:0 auto; }
   .contact-item { font-size:18px; margin:20px 0; color:#ddd; }
-  .wa-btn { display:inline-block; background:linear-gradient(45deg, #25D366, #1EBE57); color:#fff; padding:20px 55px; border-radius:50px; text-decoration:none; font-weight:800; font-size:18px; margin-top:30px; transition:0.3s; }
+  .wa-btn { 
+    display:inline-block; background:linear-gradient(45deg, #25D366, #1EBE57); color:#fff; 
+    padding:20px 55px; border-radius:50px; text-decoration:none; 
+    font-weight:800; font-size:18px; margin-top:30px; transition:0.3s; cursor:pointer;
+    z-index:10; position:relative;
+  }
   .wa-btn:hover { transform:scale(1.05); box-shadow:0 0 30px rgba(37,211,102,0.7); }
   .footer { text-align:center; padding:40px 20px; color:#555; font-size:13px; border-top:1px solid #222; }
   @media(max-width:768px){ .video-wrapper video{height:auto;} }
@@ -54,16 +59,16 @@
     </div>
   </div>
 
-  <!-- VIDEO SECTION WITH UNMUTE HINT -->
+  <!-- FIXED VIDEO SECTION WITH WORKING VIDEO -->
   <div class="section">
     <h2 class="section-title">LUXURY ON THE ISLAND</h2>
     <div class="video-wrapper">
-      <video controls autoplay muted loop playsinline>
-        <source src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_30fps.mp4" type="video/mp4">
+      <video controls autoplay muted loop playsinline preload="auto">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
-    <p class="unmute-hint">🔊 Click the speaker icon to unmute</p> <!-- NEW LINE -->
+    <p class="unmute-hint">🔊 Click the speaker icon to unmute</p>
     <p style="color:#aaa; margin-top:8px; font-size:16px;">Cinematic tour of luxury waterfront properties and island living</p>
   </div>
 
@@ -72,7 +77,7 @@
     <div class="testimonial-grid">
       <div class="testimonial-card"><div class="stars">★★★★★</div><p>"David found us a luxury duplex in Lekki that exceeded everything we wanted."</p><div class="client">- Mr. & Mrs. Adebayo, Lagos</div></div>
       <div class="testimonial-card"><div class="stars">★★★</div><p>"I was looking for investment property in London. David handled everything remotely."</p><div class="client">- James O., UK Investor</div></div>
-      <div class="testimonial-card"><div class="stars">★★★★★</div><p>"The level of service is unmatched. From viewing to closing, David made it effortless."</p><div class="client">- Sarah K., Victoria Island</div></div>
+      <div class="testimonial-card"><div class="stars">★★★</div><p>"The level of service is unmatched. From viewing to closing, David made it effortless."</p><div class="client">- Sarah K., Victoria Island</div></div>
     </div>
   </div>
 
@@ -82,7 +87,7 @@
       <div class="contact-item">📧 Email: david@davidsLuxeEstate.com</div>
       <div class="contact-item">📞 Phone: +44 20 7946 0000</div>
       <div class="contact-item">📍 Office: Victoria Island, Lagos, Nigeria</div>
-      <a href="https://wa.me/2347026558433" target="_blank" class="wa-btn">💬 WHATSAPP DAVID NOW</a>
+      <a href="https://wa.me/2347026558433" target="_blank" rel="noopener noreferrer" class="wa-btn">💬 WHATSAPP DAVID NOW</a>
     </div>
   </div>
 </div>
