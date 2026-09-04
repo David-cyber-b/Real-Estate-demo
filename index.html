@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,84 +6,60 @@
 <style>
     * { margin:0; padding:0; box-sizing:border-box; }
   body { 
-    background:#080808; 
+    background:#0a0a0a; /* Slightly lighter black */
     color:#fff; 
     font-family: 'Segoe UI', sans-serif; 
     position:relative; 
+    overflow-x:hidden;
   }
 
-  /* YOUR LOGO AS BACKGROUND - POINTS TO 1000064284.png */
+  /* BRIGHTER + FULL COVER LOGO BACKGROUND */
   .page-bg-logo {
     position:fixed;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-    width:90%;
-    max-width:950px;
-    opacity:0.14; /* Made slightly stronger */
+    width:120vw;
+    height:120vh;
+    max-width:none;
+    object-fit:cover;
+    opacity:0.22; /* 2X BRIGHTER */
     z-index:0;
     pointer-events:none;
-    filter: drop-shadow(0 0 40px rgba(212,175,55,0.25));
+    filter: brightness(1.6) drop-shadow(0 0 50px rgba(212,175,55,0.4));
   }
 
   .container { position:relative; z-index:2; max-width:800px; margin:0 auto; padding:60px 20px; text-align:center; }
-  .section-title { font-size:44px; color:#D4AF37; margin-bottom:40px; letter-spacing:4px; font-weight:700; text-shadow:0 0 20px rgba(212,175,55,0.3); }
+  .section-title { font-size:44px; color:#D4AF37; margin-bottom:40px; letter-spacing:4px; font-weight:700; text-shadow:0 0 25px rgba(212,175,55,0.4); }
   
   .about-img {
     width:300px; height:300px; border-radius:50%;
     border:4px solid #D4AF37; object-fit:cover;
     margin:0 auto 35px; display:block;
-    box-shadow:0 0 50px rgba(212,175,55,0.4);
+    box-shadow:0 0 50px rgba(212,175,55,0.5);
   }
   
-  .about-text { font-size:18px; line-height:1.9; color:#ddd; margin-bottom:50px; max-width:650px; margin-left:auto; margin-right:auto; }
+  .about-text { font-size:18px; line-height:1.9; color:#eee; margin-bottom:50px; max-width:650px; margin-left:auto; margin-right:auto; }
   
   .contact-box { 
-    background:rgba(15,15,15,0.85); border:2px solid #D4AF37; 
+    background:rgba(18,18,18,0.9); border:2px solid #D4AF37; 
     border-radius:20px; padding:50px 30px; max-width:500px; margin:0 auto;
   }
   
-  .contact-item { font-size:18px; margin:20px 0; color:#ccc; }
+  .contact-item { font-size:18px; margin:20px 0; color:#ddd; }
   .wa-btn { 
     display:inline-block; background:linear-gradient(45deg, #25D366, #1EBE57); color:#fff; 
     padding:20px 55px; border-radius:50px; text-decoration:none; 
     font-weight:800; font-size:18px; margin-top:30px;
   }
-  .wa-btn:hover { transform:scale(1.05); }
   .footer { text-align:center; padding:40px 20px; color:#555; font-size:13px; border-top:1px solid #222; margin-top:60px; }
 </style>
 </head>
 <body>
 
-<!-- THIS POINTS TO YOUR UPLOADED FILE -->
 <img src="1000064284.png" class="page-bg-logo" alt="Davids Luxe Estate">
 
 <div class="container">
   <div>
     <h2 class="section-title">ABOUT ME</h2>
-    <!-- FOREIGN BUSINESSMAN IN SUIT -->
-    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887" class="about-img" alt="CEO David">
-    <p class="about-text">
-      I'm David, Founder & CEO of DAVIDS LUXE ESTATE.<br><br>
-      For 8+ years I've specialized in luxury real estate across Lagos, Lekki, and London. We deliver discreet, premium service for elite clients.<br><br>
-      <strong style="color:#D4AF37;">PREMIUM PROPERTIES • TRUSTED & RELIABLE • SMART INVESTMENT</strong>
-    </p>
-  </div>
-
-  <div>
-    <h2 class="section-title">GET IN TOUCH</h2>
-    <div class="contact-box">
-      <div class="contact-item">📧 Email: david@davidsLuxeEstate.com</div>
-      <div class="contact-item">📞 Phone: +44 20 7946 0000</div>
-      <div class="contact-item">📍 Office: Victoria Island, Lagos, Nigeria</div>
-      <a href="https://wa.me/2347026558433" target="_blank" class="wa-btn">💬 WHATSAPP ME NOW</a>
-    </div>
-  </div>
-</div>
-
-<div class="footer">
-  © 2026 DAVIDS LUXE ESTATE. Where Luxury Meets Lifestyle.
-</div>
-
-</body>
-</html>
+    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887" class
