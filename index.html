@@ -1,202 +1,37 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DAVID'S LUXE ESTATES | Luxury Real Estate Lagos</title>
+
+<!-- LOGO IN TAB -->
+<link rel="icon" href="https://i.postimg.cc/CLMJtTHL/logo.png">
+
 <style>
     * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; }
   body { background:#000; color:#fff; font-family: 'Segoe UI', sans-serif; }
   .gold { color:#D4AF37; }
 
-  /* HERO */
-  .hero { height:100vh; position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:20px; overflow:hidden; }
+  /* NAVIGATION BETWEEN PAGES */
+  nav { position:fixed; top:0; width:100%; background:rgba(0,0,0,0.9); border-bottom:1px solid #D4AF37; z-index:1000; padding:15px; display:flex; justify-content:center; gap:30px; }
+  nav a { color:#D4AF37; text-decoration:none; font-weight:800; font-size:14px; letter-spacing:2px; transition:0.3s; }
+  nav a:hover { transform:scale(1.1); }
+
+  /* PAGE 1: BRAND PAGE - NO HOUSES */
+  .page { min-height:100vh; padding-top:80px; }
+  
+  .hero { height:calc(100vh - 80px); position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:20px; overflow:hidden; }
   .bg-image { position:absolute; top:0; left:0; width:100%; height:100%; background: url('https://images.unsplash.com/photo-1613977257363-aaae5a9817ff?q=80&w=2070') center/cover; z-index:0; animation: zoomIn 20s infinite alternate; }
+  
+  /* LOGO BACKGROUND WATERMARK */
+  .logo-bg { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:85%; max-width:900px; opacity:0.05; z-index:1; pointer-events:none; }
   @keyframes zoomIn { 0% {transform: scale(1);} 100% {transform: scale(1.1);} }
-  .overlay { position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85)); z-index:1; }
-  #particles { position:absolute; top:0; left:0; width:100%; height:100%; z-index:2; }
-  .hero-content { position:relative; z-index:3; }
+  
+  .overlay { position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85)); z-index:2; }
+  #particles { position:absolute; top:0; left:0; width:100%; height:100%; z-index:3; }
+  .hero-content { position:relative; z-index:4; }
+  .logo-main { width:280px; margin:20px 0; filter: drop-shadow(0 0 30px rgba(212,175,55,0.8)); }
 
   /* CLOCK */
-  .clock-box { width:160px; height:160px; border:4px solid #D4AF37; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 15px; font-size:18px; font-weight:800; color:#D4AF37; box-shadow:0 0 40px rgba(212,175,55,0.6); }
-  .clock-label { font-size:11px; letter-spacing:3px; color:#D4AF37; margin-bottom:8px; }
-  .badge { background:#D4AF37; color:#000; padding:6px 18px; border-radius:20px; font-size:11px; font-weight:700; display:inline-block; margin-bottom:20px; }
-  h1 { font-size:48px; color:#D4AF37; letter-spacing:3px; margin-bottom:10px; }
-  .hero p { font-size:16px; letter-spacing:2px; margin-bottom:30px; color:#ddd; }
-  .btn-group { display:flex; gap:15px; justify-content:center; flex-wrap:wrap; }
-  .btn { background:#D4AF37; color:#000; padding:14px 35px; border-radius:50px; text-decoration:none; font-weight:800; font-size:13px; transition:0.3s; }
-  .btn:hover { transform:scale(1.05); }
-  .btn-outline { background:transparent; border:2px solid #D4AF37; color:#D4AF37; }
-  .btn-whatsapp { background:#25D366; color:#fff; }
-
-  /* SECTIONS */
-  .section { padding:80px 20px; max-width:1100px; margin:0 auto; }
-  .section-title { text-align:center; font-size:36px; color:#D4AF37; margin-bottom:50px; letter-spacing:2px; }
-
-  /* PROPERTIES */
-  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; }
-  .card { background:#111; border:1px solid #222; border-radius:12px; overflow:hidden; transition:0.3s; }
-  .card:hover { transform:translateY(-8px); border-color:#D4AF37; }
-  .card img { width:100%; height:240px; object-fit:cover; }
-  .card-body { padding:25px; }
-  .price { font-size:24px; color:#D4AF37; font-weight:800; margin-bottom:8px; }
-  .title { font-size:16px; margin-bottom:12px; }
-  .features { font-size:12px; color:#aaa; margin-bottom:18px; }
-  .card-btn { display:block; text-align:center; background:#25D366; color:#fff; padding:12px; border-radius:8px; text-decoration:none; font-weight:700; }
-
-  /* ABOUT */
-  .about { background:#0a0a0a; }
-  .about-wrap { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
-  .about-img { width:100%; height:400px; object-fit:cover; border-radius:12px; border:2px solid #D4AF37; }
-  .about-text h3 { font-size:28px; color:#D4AF37; margin-bottom:15px; }
-  .about-text p { line-height:1.8; color:#ccc; margin-bottom:15px; }
-  .stats { display:flex; gap:30px; margin-top:25px; }
-  .stat h4 { font-size:32px; color:#D4AF37; }
-  .stat p { font-size:12px; color:#aaa; }
-
-  /* TOUR */
-  .tour { text-align:center; }
-  .tour iframe { width:100%; max-width:900px; height:480px; border:3px solid #D4AF37; border-radius:12px; }
-
-  /* TESTIMONIALS */
-  .testimonials { background:#0a0a0a; }
-  .t-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:25px; }
-  .t-card { background:#111; padding:25px; border-radius:12px; border-left:4px solid #D4AF37; }
-  .t-card p { font-style:italic; color:#ccc; margin-bottom:15px; }
-  .t-card b { color:#D4AF37; }
-
-  /* STICKY BAR */
-  .sticky { position:fixed; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.95); border-top:1px solid #D4AF37; display:flex; justify-content:center; gap:15px; padding:12px; z-index:999; }
-  .sticky a { padding:10px 20px; border-radius:50px; text-decoration:none; font-weight:700; font-size:13px; }
-  .call { background:#D4AF37; color:#000; }
-  .wa { background:#25D366; color:#fff; }
-
-  @media(max-width:768px) {
-    h1 { font-size:32px; } 
-    .about-wrap { grid-template-columns:1fr; }
-    .tour iframe { height:300px; }
-  }
-</style>
-</head>
-<body>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="bg-image"></div>
-  <div class="overlay"></div>
-  <canvas id="particles"></canvas>
-  <div class="hero-content">
-    <div class="clock-box" id="clock">02:26:58 PM</div>
-    <div class="clock-label">LAGOS TIME</div>
-    <div class="badge">NOW SELLING</div>
-    <h1>DAVID'S LUXE ESTATES</h1>
-    <p>LUXURY LIVING REDEFINED IN LAGOS</p>
-    <div class="btn-group">
-      <a href="#properties" class="btn">VIEW PROPERTIES</a>
-      <a href="#tour" class="btn btn-outline">VIRTUAL TOUR</a>
-    </div>
-    <div style="margin-top:15px;" class="btn-group">
-      <a href="tel:+2347026558433" class="btn">📞 CALL DAVID</a>
-      <a href="https://wa.me/2347026558433" class="btn btn-whatsapp">💬 WHATSAPP</a>
-    </div>
-  </div>
-</div>
-
-<!-- PROPERTIES -->
-<div class="section" id="properties">
-  <h2 class="section-title">FEATURED PROPERTIES</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1613977257363-aaae5a9817ff?q=80&w=2070" alt="Banana Island">
-      <div class="card-body">
-        <div class="price">₦180,000,000</div>
-        <div class="title">5 BEDROOM DUPLEX - BANANA ISLAND</div>
-        <div class="features">5 Beds | 6 Baths | Gym | Pool</div>
-        <a href="https://wa.me/2347026558433" class="card-btn">💬 SCHEDULE VIEWING</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600607687920-24783f81c4f7?q=80&w=2070" alt="Victoria Island">
-      <div class="card-body">
-        <div class="price">₦400,000,000</div>
-        <div class="title">6 BEDROOM MANSION - VICTORIA ISLAND</div>
-        <div class="features">6 Beds | 7 Baths | Cinema | Gym</div>
-        <a href="https://wa.me/2347026558433" class="card-btn">💬 SCHEDULE VIEWING</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070" alt="Eko Atlantic">
-      <div class="card-body">
-        <div class="price">₦250,000,000</div>
-        <div class="title">4 BEDROOM PENTHOUSE - EKO ATLANTIC</div>
-        <div class="features">4 Beds | 5 Baths | Pool | Sea View</div>
-        <a href="https://wa.me/2347026558433" class="card-btn">💬 SCHEDULE VIEWING</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<div class="section about" id="about">
-  <h2 class="section-title">ABOUT DAVID</h2>
-  <div class="about-wrap">
-    <!-- REPLACE THIS WITH YOUR PHOTO -->
-    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974" class="about-img" alt="David">
-    <div class="about-text">
-      <h3>Building Dreams Into Homes</h3>
-      <p>I'm David, founder of DAVID'S LUXE ESTATES. For 8 years I've helped over 200 families find their perfect luxury home in Lagos.</p>
-      <p>We don't just sell properties. We sell lifestyle, security, and generational wealth. Every client gets 24/7 access to me personally.</p>
-      <div class="stats">
-        <div class="stat"><h4>200+</h4><p>Homes Sold</p></div>
-        <div class="stat"><h4>8</h4><p>Years Experience</p></div>
-        <div class="stat"><h4>100%</h4><p>Client Trust</p></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- VIRTUAL TOUR -->
-<div class="section tour" id="tour">
-  <h2 class="section-title">VIRTUAL TOUR</h2>
-  <p style="color:#ccc; margin-bottom:30px;">Experience our flagship penthouse in 360°</p>
-  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<!-- TESTIMONIALS -->
-<div class="section testimonials" id="testimonials">
-  <h2 class="section-title">CLIENT TESTIMONIALS</h2>
-  <div class="t-grid">
-    <div class="t-card"><p>"David delivered my keys in 3 weeks. Professional and got me 15M discount. Best agent in Lagos!"</p><b>- Mrs. Adebayo, Eko Atlantic</b></div>
-    <div class="t-card"><p>"From UK to Nigeria, David handled everything. Video calls, legal, everything. Stress-free."</p><b>- Mr. Johnson, Diaspora</b></div>
-    <div class="t-card"><p>"The quality of properties David shows is unmatched. My Banana Island duplex is exactly as advertised."</p><b>- CEO Tunde, Tech Founder</b></div>
-  </div>
-</div>
-
-<!-- STICKY BAR -->
-<div class="sticky">
-  <a href="tel:+2347026558433" class="call">📞 CALL DAVID</a>
-  <a href="https://wa.me/2347026558433" class="wa">💬 WHATSAPP DAVID</a>
-</div>
-
-<script>
-// CLOCK
-function updateClock(){
-  const t = new Date().toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit', second:'2-digit', hour12:true, timeZone:'Africa/Lagos'});
-  document.getElementById('clock').innerHTML = t;
-}
-updateClock(); setInterval(updateClock, 1000);
-
-// 3D GOLD SNOW PARTICLES
-const c = document.getElementById('particles'), ctx = c.getContext('2d');
-c.width = innerWidth; c.height = innerHeight;
-let ps = Array.from({length:100}, () => ({x:Math.random()*c.width, y:Math.random()*c.height, r:Math.random()*3+1, dx:Math.random()*0.6-0.3, dy:Math.random()*1.2+0.4, o:Math.random()*0.5+0.3}));
-function draw(){ ctx.clearRect(0,0,c.width,c.height); ps.forEach(p => { ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fillStyle=`rgba(212,175,55,${p.o})`; ctx.fill(); p.x+=p.dx; p.y+=p.dy; if(p.y>c.height){p.y=0; p.x=Math.random()*c.width;} if(p.x<0||p.x>c.width) p.dx*=-1;}); requestAnimationFrame(draw);}
-draw(); addEventListener('resize', ()=>{c.width=innerWidth; c.height=innerHeight;});
-</script>
-
-</body>
-</html>
-Attachments area
-Preview YouTube video Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster)Preview YouTube video Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster)
-
+  .clock-box { width:160px; height:160px; border:4px solid #D4AF37; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 15px; font-size:18px; font-weight:800; color:#D4AF37; box-shadow:0 0 40px
