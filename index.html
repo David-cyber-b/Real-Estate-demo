@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,67 +7,81 @@
 <style>
     * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; }
-  body { background:#000; color:#fff; font-family: 'Segoe UI', sans-serif; }
+  body { background:#000; color:#fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
   
-  /* HERO WITH LOGO WATERMARK BACKGROUND */
+  /* HERO WITH LOGO AS BACKGROUND PICTURE */
   .hero { height:100vh; position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:20px; overflow:hidden; }
-  .bg-image { position:absolute; top:0; left:0; width:100%; height:100%; background: url('https://images.unsplash.com/photo-1613977257363-aaae5a9817ff?q=80&w=2070') center/cover; z-index:0; animation: zoomIn 20s infinite alternate; }
-  .logo-bg { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:70%; opacity:0.04; z-index:0; }
+  
+  /* BACKGROUND HOUSE IMAGE */
+  .bg-image { 
+    position:absolute; top:0; left:0; width:100%; height:100%; 
+    background: url('https://images.unsplash.com/photo-1613977257363-aaae5a9817ff?q=80&w=2070') center/cover no-repeat; 
+    z-index:0; 
+    animation: zoomIn 20s infinite alternate; 
+  }
+  
+  /* LOGO AS BIG BACKGROUND WATERMARK */
+  .logo-bg { 
+    position:absolute; 
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%,-50%); 
+    width:85%; 
+    max-width:1000px;
+    opacity:0.06; 
+    z-index:1; 
+    pointer-events:none;
+  }
   @keyframes zoomIn { 0% {transform: scale(1);} 100% {transform: scale(1.1);} }
-  .overlay { position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)); z-index:1; }
-  #particles { position:absolute; top:0; left:0; width:100%; height:100%; z-index:2; }
-  .hero-content { position:relative; z-index:3; }
+  
+  .overlay { position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.92)); z-index:2; }
+  #particles { position:absolute; top:0; left:0; width:100%; height:100%; z-index:3; }
+  .hero-content { position:relative; z-index:4; }
   .logo { width:260px; margin:20px 0; filter: drop-shadow(0 0 30px rgba(212,175,55,0.8)); }
-  .tagline { font-size:14px; letter-spacing:3px; color:#D4AF37; margin-bottom:5px; }
-  .sub-tagline { font-style:italic; color:#D4AF37; font-size:13px; margin-bottom:25px; }
+  .tagline { font-size:14px; letter-spacing:4px; color:#D4AF37; margin-bottom:5px; font-weight:700; }
+  .sub-tagline { font-style:italic; color:#D4AF37; font-size:14px; margin-bottom:30px; }
   
   /* DUAL CLOCKS */
-  .clock-wrapper { display:flex; gap:30px; justify-content:center; margin-bottom:25px; flex-wrap:wrap; }
-  .clock-box { width:150px; height:150px; border:4px solid #D4AF37; border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; font-weight:800; box-shadow:0 0 40px rgba(212,175,55,0.6); }
-  .clock-time { font-size:16px; color:#D4AF37; }
-  .clock-label { font-size:9px; color:#aaa; letter-spacing:2px; margin-top:5px; }
+  .clock-wrapper { display:flex; gap:30px; justify-content:center; margin-bottom:30px; flex-wrap:wrap; }
+  .clock-box { width:160px; height:160px; border:4px solid #D4AF37; border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; font-weight:800; box-shadow:0 0 50px rgba(212,175,55,0.6); background:rgba(0,0,0,0.4); backdrop-filter:blur(5px); }
+  .clock-time { font-size:18px; color:#D4AF37; }
+  .clock-label { font-size:10px; color:#aaa; letter-spacing:2px; margin-top:6px; }
 
   .btn-group { display:flex; gap:15px; justify-content:center; flex-wrap:wrap; }
-  .btn { background:#D4AF37; color:#000; padding:14px 35px; border-radius:50px; text-decoration:none; font-weight:800; font-size:13px; transition:0.3s; }
-  .btn:hover { transform:scale(1.05); }
+  .btn { background:#D4AF37; color:#000; padding:15px 40px; border-radius:50px; text-decoration:none; font-weight:800; font-size:14px; transition:0.3s; letter-spacing:1px; }
+  .btn:hover { transform:scale(1.06); box-shadow:0 0 20px rgba(212,175,55,0.5); }
   .btn-whatsapp { background:#25D366; color:#fff; }
   
-  .section { padding:80px 20px; max-width:1200px; margin:0 auto; }
-  .section-title { text-align:center; font-size:36px; color:#D4AF37; margin-bottom:50px; letter-spacing:2px; }
+  .section { padding:100px 20px; max-width:1200px; margin:0 auto; }
+  .section-title { text-align:center; font-size:38px; color:#D4AF37; margin-bottom:60px; letter-spacing:2px; }
   
-  /* ABOUT WITH PICS */
-  .about-flex { display:flex; align-items:center; gap:40px; flex-wrap:wrap; justify-content:center; margin-bottom:50px; }
-  .ceo-photo { width:280px; height:280px; border-radius:50%; border:4px solid #D4AF37; object-fit:cover; box-shadow:0 0 40px rgba(212,175,55,0.5); }
-  .about-text { text-align:left; max-width:600px; font-size:16px; line-height:1.8; color:#ccc; }
+  /* ABOUT WITH BUSINESSMAN PICS */
+  .about-flex { display:flex; align-items:center; gap:50px; flex-wrap:wrap; justify-content:center; margin-bottom:60px; }
+  .ceo-photo { width:300px; height:300px; border-radius:50%; border:5px solid #D4AF37; object-fit:cover; box-shadow:0 0 50px rgba(212,175,55,0.5); }
+  .about-text { text-align:left; max-width:650px; font-size:17px; line-height:1.9; color:#ddd; }
   .about-text span { color:#D4AF37; font-weight:700; }
-  .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; }
-  .gallery img { width:100%; height:250px; object-fit:cover; border-radius:12px; border:2px solid #222; transition:0.3s; }
-  .gallery img:hover { border-color:#D4AF37; transform:scale(1.03); }
+  
+  /* BROAD BUSINESS GALLERY */
+  .gallery-title { text-align:center; color:#D4AF37; font-size:24px; margin-bottom:30px; letter-spacing:1px; }
+  .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:25px; }
+  .gallery img { width:100%; height:270px; object-fit:cover; border-radius:14px; border:2px solid #222; transition:0.4s; }
+  .gallery img:hover { border-color:#D4AF37; transform:scale(1.04); box-shadow:0 0 25px rgba(212,175,55,0.3); }
 
   /* PROPERTIES */
-  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; }
-  .card { background:#111; border:1px solid #222; border-radius:12px; overflow:hidden; transition:0.3s; }
-  .card:hover { transform:translateY(-8px); border-color:#D4AF37; }
-  .card img { width:100%; height:240px; object-fit:cover; }
-  .card-body { padding:25px; }
-  .price { font-size:24px; color:#D4AF37; font-weight:800; margin-bottom:8px; }
-  .title { font-size:16px; margin-bottom:12px; }
-  .features { font-size:12px; color:#aaa; margin-bottom:18px; }
-  .card-btn { display:block; text-align:center; background:linear-gradient(135deg,#25D366,#128C7E); color:#fff; padding:14px; border-radius:10px; text-decoration:none; font-weight:800; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:35px; }
+  .card { background:#0a0a0a; border:1px solid #222; border-radius:14px; overflow:hidden; transition:0.4s; }
+  .card:hover { transform:translateY(-10px); border-color:#D4AF37; box-shadow:0 10px 40px rgba(212,175,55,0.2); }
+  .card img { width:100%; height:260px; object-fit:cover; }
+  .card-body { padding:30px; }
+  .price { font-size:26px; color:#D4AF37; font-weight:800; margin-bottom:10px; }
+  .title { font-size:17px; margin-bottom:15px; font-weight:600; }
+  .features { font-size:13px; color:#aaa; margin-bottom:20px; }
+  .card-btn { display:block; text-align:center; background:linear-gradient(135deg,#25D366,#128C7E); color:#fff; padding:15px; border-radius:10px; text-decoration:none; font-weight:800; font-size:14px; transition:0.3s; }
+  .card-btn:hover { transform:scale(1.03); }
   
-  /* YOUTUBE */
-  .video-wrap { max-width:800px; margin:0 auto; border:2px solid #D4AF37; border-radius:12px; overflow:hidden; }
-  .video-wrap iframe { width:100%; height:450px; }
-
-  /* TESTIMONIALS */
-  .testi-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:25px; }
-  .testi { background:#111; border-left:4px solid #D4AF37; padding:25px; border-radius:8px; }
-  .testi p { font-style:italic; color:#ccc; margin-bottom:15px; }
-  .testi h4 { color:#D4AF37; }
-
   /* STICKY BAR */
-  .sticky { position:fixed; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.95); border-top:1px solid #D4AF37; display:flex; justify-content:center; gap:15px; padding:12px; z-index:999; }
-  .sticky a { padding:10px 20px; border-radius:50px; text-decoration:none; font-weight:700; font-size:13px; }
+  .sticky { position:fixed; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.96); border-top:2px solid #D4AF37; display:flex; justify-content:center; gap:20px; padding:15px; z-index:999; }
+  .sticky a { padding:12px 25px; border-radius:50px; text-decoration:none; font-weight:800; font-size:14px; }
   .call { background:#D4AF37; color:#000; }
   .wa { background:#25D366; color:#fff; }
 </style>
@@ -77,7 +90,10 @@
 
 <div class="hero">
   <div class="bg-image"></div>
-  <img src="https://i.postimg.cc/CLMJtTHL/logo.png" class="logo-bg" alt="">
+  
+  <!-- YOUR LOGO AS BACKGROUND PICTURE -->
+  <img src="https://i.postimg.cc/CLMJtTHL/logo.png" class="logo-bg" alt="Davids Luxe Estate Background">
+  
   <div class="overlay"></div>
   <canvas id="particles"></canvas>
   <div class="hero-content">
@@ -94,6 +110,7 @@
       </div>
     </div>
     
+    <!-- MAIN LOGO -->
     <img src="https://i.postimg.cc/CLMJtTHL/logo.png" class="logo" alt="Davids Luxe Estate">
     <div class="tagline">LIVE • INVEST • PROSPER</div>
     <div class="sub-tagline">Where Luxury Meets Lifestyle</div>
@@ -106,26 +123,29 @@
   </div>
 </div>
 
-<!-- ABOUT ME WITH PICS -->
+<!-- ABOUT ME WITH BUSINESSMAN PICS -->
 <div class="section" id="about">
   <h2 class="section-title">ABOUT DAVID</h2>
   <div class="about-flex">
-    <!-- REPLACE THIS WITH YOUR PHOTO -->
+    <!-- REPLACE WITH YOUR CEO PHOTO: SUIT, OFFICE, OR IN FRONT OF MANSION -->
     <img src="https://i.postimg.cc/CLMJtTHL/logo.png" alt="David CEO Davids Luxe Estate" class="ceo-photo">
     
     <div class="about-text">
-      I’m <span>David</span>, Founder of <span>Davids Luxe Estate</span>. For 5+ years I’ve helped high-net-worth clients secure luxury properties in <span>Lekki, Banana Island, VI, and London</span>. 
+      I’m <span>David</span>, Founder & CEO of <span>Davids Luxe Estate</span>. For 5+ years I’ve brokered luxury real estate deals for executives, entrepreneurs, and investors across <span>Lekki, Banana Island, VI, and London</span>. 
       <br><br>
-      My mission is simple: <span>Match you with a home that reflects your success.</span> Discreet. Fast. Elite service only.
+      We don’t just sell houses. We build legacies. <span>Discreet. Fast. Elite service only.</span>
+      <br><br>
+      My network includes developers, architects, and HNW clients. If you want the best, you’re in the right room.
     </div>
   </div>
 
-  <!-- REPLACE THESE 3 WITH YOUR PICS -->
-  <h3 style="text-align:center; color:#D4AF37; font-size:22px; margin-bottom:25px;">LIFESTYLE & DEALS</h3>
+  <h3 class="gallery-title">BUSINESS & LIFESTYLE</h3>
   <div class="gallery">
-    <img src="https://i.postimg.cc/CLMJtTHL/logo.png" alt="David with client">
-    <img src="https://i.postimg.cc/CLMJtTHL/logo.png" alt="Luxury car">
-    <img src="https://i.postimg.cc/CLMJtTHL/logo.png" alt="Property handover">
+    <!-- REPLACE THESE 3 WITH YOUR BUSINESS PICS -->
+    <!-- IDEAS: 1. You in suit at office 2. You with G-Wagon/Range 3. You at property site with blueprints -->
+    <img src="https://i.postimg.cc/CLMJtTHL/logo.png" alt="Businessman CEO">
+    <img src="https://i.postimg.cc/CLMJtTHL/logo.png" alt="Luxury Business">
+    <img src="https://i.postimg.cc/CLMJtTHL/logo.png" alt="Real Estate Deals">
   </div>
 </div>
 
@@ -133,40 +153,18 @@
 <div class="section" id="properties">
   <h2 class="section-title">FEATURED PROPERTIES</h2>
   <div class="grid">
+    
+    <!-- HOUSE 1 - YOUR CORRECT WHITE HOUSE -->
     <div class="card">
       <img src="https://i.postimg.cc/hPK3B7gn/1000064145.jpg" alt="White Luxury Duplex">
       <div class="card-body">
         <div class="price">₦280,000,000</div>
         <div class="title">5 BEDROOM MODERN DUPLEX - LEKKI PHASE 1</div>
-        <div class="features">5 Beds | 6 Baths | Pool | CCTV | BQ</div>
+        <div class="features">5 Beds | 6 Baths | Swimming Pool | CCTV | BQ | Smart Home</div>
         <a href="https://wa.me/2347026558433?text=I%20want%20to%20schedule%20a%20viewing%20for%20the%20280M%20Lekki%20Duplex" class="card-btn">💬 INQUIRE ON WHATSAPP</a>
       </div>
     </div>
     
-    <!-- ADD SECOND HOUSE HERE WHEN YOU SEND LINK -->
-  </div>
-</div>
-
-<!-- YOUTUBE VIDEO -->
-<div class="section" id="video">
-  <h2 class="section-title">LUXURY TOUR</h2>
-  <div class="video-wrap">
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
-
-<!-- TESTIMONIALS -->
-<div class="section" id="testimonials">
-  <h2 class="section-title">CLIENT TESTIMONIALS</h2>
-  <div class="testi-grid">
-    <div class="testi">
-      <p>"David found me my Banana Island duplex in 2 weeks. Discreet, professional, and got me 15M off asking price."</p>
-      <h4>- Adebayo O. | CEO, Fintech</h4>
-    </div>
-    <div class="testi">
-      <p>"The gold standard. From viewing to keys, everything was luxury. If you want the best, call David."</p>
-      <h4>- Mrs. Folake T. | Investor</h4>
-    </div>
   </div>
 </div>
 
@@ -186,15 +184,12 @@ function updateClocks(){
 }
 updateClocks(); setInterval(updateClocks, 1000);
 
-// WHITE GOLDEN PARTICLES RAIN
+// GOLDEN PARTICLES RAIN
 const c = document.getElementById('particles'), ctx = c.getContext('2d');
 c.width = innerWidth; c.height = innerHeight;
 let ps = Array.from({length:120}, () => ({x:Math.random()*c.width, y:Math.random()*c.height, r:Math.random()*2+1, dx:Math.random()*0.4-0.2, dy:Math.random()*2+1, o:Math.random()*0.6+0.4}));
-function draw(){ ctx.clearRect(0,0,c.width,c.height); ps.forEach(p => { ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fillStyle=`rgba(255,255,255,${p.o})`; ctx.fill(); p.x+=p.dx; p.y+=p.dy; if(p.y>c.height){p.y=-10; p.x=Math.random()*c.width;} }); requestAnimationFrame(draw);}
+function draw(){ ctx.clearRect(0,0,c.width,c.height); ps.forEach(p => { ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fillStyle=`rgba(212,175,55,${p.o})`; ctx.fill(); p.x+=p.dx; p.y+=p.dy; if(p.y>c.height){p.y=-10; p.x=Math.random()*c.width;} }); requestAnimationFrame(draw);}
 draw(); addEventListener('resize', ()=>{c.width=innerWidth; c.height=innerHeight;});
 </script>
 </body>
 </html>
-Attachments area
-Preview YouTube video Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster)Preview YouTube video Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster)
-
