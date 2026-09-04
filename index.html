@@ -19,9 +19,10 @@
   .quote { font-size:22px; font-style:italic; color:#D4AF37; border-left:4px solid #D4AF37; padding-left:20px; margin:30px 0; }
   
   /* VIDEO SECTION */
-  .video-wrapper { max-width:900px; margin:0 auto; border:3px solid #D4AF37; border-radius:20px; overflow:hidden; box-shadow:0 0 50px rgba(212,175,55,0.4); }
+  .video-wrapper { max-width:900px; margin:0 auto 60px auto; border:3px solid #D4AF37; border-radius:20px; overflow:hidden; box-shadow:0 0 50px rgba(212,175,55,0.4); position:relative; }
   .video-wrapper video { width:100%; height:auto; display:block; border-radius:16px; background:#000; }
   .unmute-hint { color:#D4AF37; margin-top:12px; font-size:14px; font-weight:600; letter-spacing:1px; }
+  .video-desc { color:#aaa; margin-top:8px; font-size:16px; margin-bottom:40px; }
 
   .testimonial-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; }
   .testimonial-card { background:rgba(20,20,20,0.8); border:1px solid #D4AF37; border-radius:16px; padding:30px; text-align:left; backdrop-filter: blur(8px); }
@@ -59,17 +60,43 @@
     </div>
   </div>
 
-  <!-- HUMAN VIDEO SECTION -->
+  <!-- VIDEO 1: INTRO -->
   <div class="section">
-    <h2 class="section-title">LUXURY ON THE ISLAND</h2>
+    <h2 class="section-title">MEET DAVID</h2>
     <div class="video-wrapper">
-      <video controls autoplay muted loop playsinline preload="auto">
-        <source src="https://videos.pexels.com/video-files/3183155/3183155-uhd_2560_1440_25fps.mp4" type="video/mp4">
+      <video id="luxVideo1" controls autoplay muted loop playsinline preload="metadata">
+        <source src="david-video1.mp4.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
     <p class="unmute-hint">🔊 Click the speaker icon to unmute</p>
-    <p style="color:#aaa; margin-top:8px; font-size:16px;">David discusses luxury houses, investment, and DAVIDS LUXE ESTATE</p>
+    <p class="video-desc">David introduces DAVIDS LUXE ESTATE and luxury on the Island</p>
+  </div>
+
+  <!-- VIDEO 2: FOREIGN CEO -->
+  <div class="section">
+    <h2 class="section-title">FROM OUR PARTNER</h2>
+    <div class="video-wrapper">
+      <video id="luxVideo2" controls autoplay muted loop playsinline preload="metadata">
+        <source src="david-video2.mp4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p class="unmute-hint">🔊 Click the speaker icon to unmute</p>
+    <p class="video-desc">International client discusses luxury houses in Lagos Island and Banana Island</p>
+  </div>
+
+  <!-- VIDEO 3: 10MIN TESTIMONIAL -->
+  <div class="section">
+    <h2 class="section-title">HOW WE GROW BUSINESS</h2>
+    <div class="video-wrapper">
+      <video id="luxVideo3" controls autoplay muted loop playsinline preload="metadata">
+        <source src="david-video3.mp4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p class="unmute-hint">🔊 Click the speaker icon to unmute</p>
+    <p class="video-desc">10 minute testimonial: How David Paul's website transformed our business</p>
   </div>
 
   <div class="section">
@@ -77,7 +104,7 @@
     <div class="testimonial-grid">
       <div class="testimonial-card"><div class="stars">★★★</div><p>"David found us a luxury duplex in Lekki that exceeded everything we wanted."</p><div class="client">- Mr. & Mrs. Adebayo, Lagos</div></div>
       <div class="testimonial-card"><div class="stars">★★★</div><p>"I was looking for investment property in London. David handled everything remotely."</p><div class="client">- James O., UK Investor</div></div>
-      <div class="testimonial-card"><div class="stars">★★★</div><p>"The level of service is unmatched. From viewing to closing, David made it effortless."</p><div class="client">- Sarah K., Victoria Island</div></div>
+      <div class="testimonial-card"><div class="stars">★★★★★</div><p>"The level of service is unmatched. From viewing to closing, David made it effortless."</p><div class="client">- Sarah K., Victoria Island</div></div>
     </div>
   </div>
 
@@ -93,6 +120,18 @@
 </div>
 
 <div class="footer">© 2026 DAVIDS LUXE ESTATE. Where Luxury Meets Lifestyle.</div>
+
+<script>
+// FORCE ALL VIDEOS TO WORK
+document.addEventListener('DOMContentLoaded', function() {
+  const vids = [document.getElementById('luxVideo1'), document.getElementById('luxVideo2'), document.getElementById('luxVideo3')];
+  vids.forEach(vid => {
+    if(vid) {
+      vid.addEventListener('loadeddata', () => { vid.play().catch(()=>{}); });
+    }
+  });
+});
+</script>
 
 </body>
 </html>
