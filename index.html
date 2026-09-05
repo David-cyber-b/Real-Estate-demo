@@ -6,124 +6,32 @@
 <title>DAVIDS LUXE ESTATE</title>
 <style>
     * { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body { background:#0a0a0a; color:#fff; font-family: 'Segoe UI', sans-serif; position:relative; }
-  .page-bg-logo { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); width:120vw; height:120vh; max-width:none; object-fit:cover; opacity:0.20; z-index:-1; pointer-events:none; filter: brightness(1.5) drop-shadow(0 0 50px rgba(212,175,55,0.4)); }
-  .content { position:relative; z-index:2; }
-  .section { min-height:100vh; padding:120px 20px; max-width:1000px; margin:0 auto; text-align:center; }
-  .section-title { font-size:44px; color:#D4AF37; margin-bottom:50px; letter-spacing:4px; font-weight:700; text-shadow:0 0 25px rgba(212,175,55,0.4); }
-  .about-grid { display:flex; gap:50px; align-items:center; text-align:left; flex-wrap:wrap; justify-content:center; }
-  .about-img { width:350px; height:350px; border-radius:20px; border:4px solid #D4AF37; object-fit:cover; box-shadow:0 0 50px rgba(212,175,55,0.5); }
-  .about-text { flex:1; min-width:300px; }
-  .about-text p { font-size:18px; line-height:1.9; color:#eee; margin-bottom:20px; }
-  .quote { font-size:22px; font-style:italic; color:#D4AF37; border-left:4px solid #D4AF37; padding-left:20px; margin:30px 0; }
-  
-  /* VIDEO SECTION */
-  .video-wrapper { max-width:900px; margin:0 auto 60px auto; position:relative; z-index:9999; background:transparent; border:none; box-shadow:none; }
-  .video-wrapper video { width:100%; height:auto; display:block; border-radius:16px; background:#000; border:3px solid #D4AF37; position:relative; z-index:10000; pointer-events:all !important; }
-  .unmute-hint { color:#D4AF37; margin-top:12px; font-size:14px; font-weight:600; letter-spacing:1px; }
-  .video-desc { color:#aaa; margin-top:8px; font-size:16px; margin-bottom:40px; }
-
-  .testimonial-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; }
-  .testimonial-card { background:rgba(20,20,20,0.8); border:1px solid #D4AF37; border-radius:16px; padding:30px; text-align:left; backdrop-filter: blur(8px); }
-  .testimonial-card .stars { color:#D4AF37; font-size:20px; margin-bottom:15px; }
-  .testimonial-card p { font-size:16px; color:#ddd; line-height:1.7; margin-bottom:15px; }
-  .testimonial-card .client { color:#D4AF37; font-weight:700; }
-  .contact-box { background:rgba(18,18,18,0.9); border:2px solid #D4AF37; border-radius:20px; padding:50px 30px; max-width:600px; margin:0 auto; position:relative; z-index:3; }
-  .contact-item { font-size:18px; margin:20px 0; color:#ddd; }
-  .wa-btn { 
-    display:inline-block; background:linear-gradient(45deg, #25D366, #1EBE57); color:#fff; 
-    padding:20px 55px; border-radius:50px; text-decoration:none; 
-    font-weight:800; font-size:18px; margin-top:30px; transition:0.3s; cursor:pointer;
-    z-index:10; position:relative; pointer-events:auto;
-  }
-  .wa-btn:hover { transform:scale(1.05); box-shadow:0 0 30px rgba(37,211,102,0.7); }
-  .footer { text-align:center; padding:40px 20px; color:#555; font-size:13px; border-top:1px solid #222; }
-  @media(max-width:768px){ .video-wrapper video{height:auto;} }
+  body { background:#0a0a0a; color:#fff; font-family: 'Segoe UI', sans-serif; }
+  .page-bg-logo { display:none; } /* TEMP: REMOVED BACKGROUND COMPLETELY */
+  .section { padding:80px 20px; max-width:1000px; margin:0 auto; text-align:center; }
+  .section-title { font-size:44px; color:#D4AF37; margin-bottom:30px; }
+  .video-wrapper { max-width:900px; margin:0 auto 40px auto; }
+  .video-wrapper video { width:100%; border:3px solid #D4AF37; border-radius:16px; }
+  .wa-btn { display:inline-block; background:#25D366; color:#fff; padding:20px 55px; border-radius:50px; text-decoration:none; font-weight:800; margin-top:30px; }
 </style>
 </head>
 <body>
 
-<img src="1000064284.png" class="page-bg-logo" alt="Davids Luxe Estate">
-
 <div class="content">
   <div class="section">
-    <h2 class="section-title">ABOUT ME</h2>
-    <div class="about-grid">
-      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887" class="about-img" alt="CEO David">
-      <div class="about-text">
-        <p>I'm <strong>David</strong>, Founder & CEO of <strong>DAVIDS LUXE ESTATE</strong>.</p>
-        <p>For 8+ years I've specialized in luxury real estate across Lagos, Lekki, and London.</p>
-        <div class="quote">"Luxury is not a place, it's an experience. My job is to find you the key."</div>
-        <p><strong style="color:#D4AF37;">PREMIUM PROPERTIES • TRUSTED & RELIABLE • SMART INVESTMENT</strong></p>
-      </div>
-    </div>
-  </div>
-
-  <!-- VIDEO 1: INTRO -->
-  <div class="section">
-    <h2 class="section-title">MEET DAVID</h2>
+    <h2 class="section-title">TEST VIDEO 1</h2>
     <div class="video-wrapper">
-      <video id="luxVideo1" controls loop playsinline preload="metadata"> <!-- REMOVED autoplay muted -->
+      <video controls>
         <source src="david.video1.mp4.mp4" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
-    </div>
-    <p class="unmute-hint">▶️ Click play, then 🔊 to unmute</p>
-    <p class="video-desc">David introduces DAVIDS LUXE ESTATE and luxury on the Island</p>
-  </div>
-
-  <!-- VIDEO 2: FOREIGN CEO -->
-  <div class="section">
-    <h2 class="section-title">FROM OUR PARTNER</h2>
-    <div class="video-wrapper">
-      <video id="luxVideo2" controls loop playsinline preload="metadata"> <!-- REMOVED autoplay muted -->
-        <source src="david.video2.mp4.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <p class="unmute-hint">▶️ Click play, then 🔊 to unmute</p>
-    <p class="video-desc">International client discusses luxury houses in Lagos Island and Banana Island</p>
-  </div>
-
-  <!-- VIDEO 3: 10MIN TESTIMONIAL -->
-  <div class="section">
-    <h2 class="section-title">HOW WE GROW BUSINESS</h2>
-    <div class="video-wrapper">
-      <video id="luxVideo3" controls loop playsinline preload="metadata"> <!-- REMOVED autoplay muted -->
-        <source src="david.video3.mp4.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <p class="unmute-hint">▶️ Click play, then 🔊 to unmute</p>
-    <p class="video-desc">10 minute testimonial: How David Paul's website transformed our business</p>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">CLIENT TESTIMONIALS</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial-card"><div class="stars">★★★</div><p>"David found us a luxury duplex in Lekki that exceeded everything we wanted."</p><div class="client">- Mr. & Mrs. Adebayo, Lagos</div></div>
-      <div class="testimonial-card"><div class="stars">★★★</div><p>"I was looking for investment property in London. David handled everything remotely."</p><div class="client">- James O., UK Investor</div></div>
-      <div class="testimonial-card"><div class="stars">★★★</div><p>"The level of service is unmatched. From viewing to closing, David made it effortless."</p><div class="client">- Sarah K., Victoria Island</div></div>
     </div>
   </div>
 
   <div class="section">
     <h2 class="section-title">GET IN TOUCH</h2>
-    <div class="contact-box">
-      <div class="contact-item">📧 Email: david@davidsLuxeEstate.com</div>
-      <div class="contact-item">📞 Phone: +44 20 7946 0000</div>
-      <div class="contact-item">📍 Office: Victoria Island, Lagos, Nigeria</div>
-      <a href="https://wa.me/2347026558433" target="_blank" rel="noopener noreferrer" class="wa-btn">💬 WHATSAPP DAVID NOW</a>
-    </div>
+    <a href="https://wa.me/2347026558433" target="_blank" class="wa-btn">💬 WHATSAPP DAVID NOW</a>
   </div>
 </div>
-
-<div class="footer">© 2026 DAVIDS LUXE ESTATE. Where Luxury Meets Lifestyle.</div>
-
-<script>
-// REMOVED AUTOPLAY SCRIPT
-</script>
 
 </body>
 </html>
