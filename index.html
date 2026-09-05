@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,9 +16,9 @@
   .about-text p { font-size:18px; line-height:1.9; color:#eee; margin-bottom:20px; }
   .quote { font-size:22px; font-style:italic; color:#D4AF37; border-left:4px solid #D4AF37; padding-left:20px; margin:30px 0; }
   
-  /* VIDEO SECTION-FIXED CLICKS */
-  .video-wrapper { max-width:900px; margin:0 auto 60px auto; border:3px solid #D4AF37; border-radius:20px; overflow:visible;/* FIX:was hidden,was blocking controls*/ box-shadow:0 0 50px rgba(212,175,55,0.4); position:relative;z-index:5;/*FIX:put it above background*/
-  .video-wrapper video { width:100%; height:auto; display:block; border-radius:16px; background:#000;pointer-events:auto;/*FIX:force controls clickable*/ }
+  /* VIDEO SECTION - FIXED CLICKS */
+  .video-wrapper { max-width:900px; margin:0 auto 60px auto; border:3px solid #D4AF37; border-radius:20px; overflow:visible; box-shadow:0 0 50px rgba(212,175,55,0.4); position:relative; z-index:5; }
+  .video-wrapper video { width:100%; height:auto; display:block; border-radius:16px; background:#000; pointer-events:auto; }
   .unmute-hint { color:#D4AF37; margin-top:12px; font-size:14px; font-weight:600; letter-spacing:1px; }
   .video-desc { color:#aaa; margin-top:8px; font-size:16px; margin-bottom:40px; }
 
@@ -29,13 +27,13 @@
   .testimonial-card .stars { color:#D4AF37; font-size:20px; margin-bottom:15px; }
   .testimonial-card p { font-size:16px; color:#ddd; line-height:1.7; margin-bottom:15px; }
   .testimonial-card .client { color:#D4AF37; font-weight:700; }
-  .contact-box { background:rgba(18,18,18,0.9); border:2px solid #D4AF37; border-radius:20px; padding:50px 30px; max-width:600px; margin:0 auto; }
+  .contact-box { background:rgba(18,18,18,0.9); border:2px solid #D4AF37; border-radius:20px; padding:50px 30px; max-width:600px; margin:0 auto; position:relative; z-index:3; }
   .contact-item { font-size:18px; margin:20px 0; color:#ddd; }
   .wa-btn { 
     display:inline-block; background:linear-gradient(45deg, #25D366, #1EBE57); color:#fff; 
     padding:20px 55px; border-radius:50px; text-decoration:none; 
     font-weight:800; font-size:18px; margin-top:30px; transition:0.3s; cursor:pointer;
-    z-index:10; position:relative;
+    z-index:10; position:relative; pointer-events:auto;
   }
   .wa-btn:hover { transform:scale(1.05); box-shadow:0 0 30px rgba(37,211,102,0.7); }
   .footer { text-align:center; padding:40px 20px; color:#555; font-size:13px; border-top:1px solid #222; }
@@ -65,10 +63,11 @@
     <h2 class="section-title">MEET DAVID</h2>
     <div class="video-wrapper">
       <video id="luxVideo1" controls autoplay muted loop playsinline preload="metadata">
-        <source src="david-video1.mp4.mp4" type="video/mp4">
+        <source src="david.video1.mp4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
     </div>
-    <p class="unmute-hint">🔊 Click the speaker icon to unmute</p><!--NEW LINE -->
+    <p class="unmute-hint">🔊 Click the speaker icon to unmute</p>
     <p class="video-desc">David introduces DAVIDS LUXE ESTATE and luxury on the Island</p>
   </div>
 
@@ -77,10 +76,11 @@
     <h2 class="section-title">FROM OUR PARTNER</h2>
     <div class="video-wrapper">
       <video id="luxVideo2" controls autoplay muted loop playsinline preload="metadata">
-        <source src="david-video2.mp4.mp4" type="video/mp4">
+        <source src="david.video2.mp4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
     </div>
-    <p class="unmute-hint">🔊 Click the speaker icon to unmute</p><!--NEW LINE -->
+    <p class="unmute-hint">🔊 Click the speaker icon to unmute</p>
     <p class="video-desc">International client discusses luxury houses in Lagos Island and Banana Island</p>
   </div>
 
@@ -89,10 +89,11 @@
     <h2 class="section-title">HOW WE GROW BUSINESS</h2>
     <div class="video-wrapper">
       <video id="luxVideo3" controls autoplay muted loop playsinline preload="metadata">
-        <source src="david-video3.mp4.mp4" type="video/mp4">
+        <source src="david.video3.mp4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
     </div>
-    <p class="unmute-hint">🔊 Click the speaker icon to unmute</p><!--NEW LINE -->
+    <p class="unmute-hint">🔊 Click the speaker icon to unmute</p>
     <p class="video-desc">10 minute testimonial: How David Paul's website transformed our business</p>
   </div>
 
@@ -101,7 +102,7 @@
     <div class="testimonial-grid">
       <div class="testimonial-card"><div class="stars">★★★</div><p>"David found us a luxury duplex in Lekki that exceeded everything we wanted."</p><div class="client">- Mr. & Mrs. Adebayo, Lagos</div></div>
       <div class="testimonial-card"><div class="stars">★★★</div><p>"I was looking for investment property in London. David handled everything remotely."</p><div class="client">- James O., UK Investor</div></div>
-      <div class="testimonial-card"><div class="stars">★★★★★</div><p>"The level of service is unmatched. From viewing to closing, David made it effortless."</p><div class="client">- Sarah K., Victoria Island</div></div>
+      <div class="testimonial-card"><div class="stars">★★★</div><p>"The level of service is unmatched. From viewing to closing, David made it effortless."</p><div class="client">- Sarah K., Victoria Island</div></div>
     </div>
   </div>
 
@@ -131,4 +132,4 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 </body>
-</html>
+</html
