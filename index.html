@@ -1,76 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DAVIDS LUXE ESTATE</title>
-<style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:#0a0a0a; color:#fff; font-family: 'Segoe UI', sans-serif; }
-  .page-bg-logo { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); width:120vw; height:120vh; opacity:0.20; z-index:-1; pointer-events:none; filter: brightness(1.5) drop-shadow(0 0 50px rgba(212,175,55,0.4)); }
-  .section { padding:100px 20px; max-width:1000px; margin:0 auto; text-align:center; }
-  .section-title { font-size:44px; color:#D4AF37; margin-bottom:40px; letter-spacing:4px; font-weight:700; }
-  .video-wrapper { max-width:900px; margin:0 auto 50px auto; position:relative; }
-  .video-wrapper video { width:100%; border:3px solid #D4AF37; border-radius:16px; background:#000; }
-  .unmute-btn { position:absolute; top:15px; right:15px; z-index:9999; background:rgba(0,0,0,0.8); color:#D4AF37; border:2px solid #D4AF37; padding:12px 22px; border-radius:50px; font-weight:800; cursor:pointer; font-size:15px; }
-  .unmute-btn:hover { background:#D4AF37; color:#000; }
-  .video-hint { color:#D4AF37; margin-top:12px; font-size:15px; font-weight:600; }
-  .video-desc { color:#aaa; margin-top:8px; font-size:16px; margin-bottom:40px; }
-  .wa-btn { display:inline-block; background:linear-gradient(45deg, #25D366, #1EBE57); color:#fff; padding:20px 55px; border-radius:50px; text-decoration:none; font-weight:800; margin-top:30px; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David's LUXE ESTATES - Premium Real Estate in Lagos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', Arial, sans-serif; background: #fff; color: #111; }
+    a { text-decoration: none; }
+  </style>
 </head>
 <body>
 
-<img src="1000064284.png" class="page-bg-logo" alt="Davids Luxe Estate">
+  <!-- PASTE YOUR HERO/BANNER SECTION HERE -->
+  <!-- <section id="hero">... </section> -->
 
-<div class="section">
-  <h2 class="section-title">MEET DAVID</h2>
-  <div class="video-wrapper">
-    <button class="unmute-btn" onclick="playUnmute('v1')">🔊 TAP FOR SOUND</button>
-    <video id="v1" controls>
-      <source src="david-video1.mp4.mp4" type="video/mp4">
-    </video>
-  </div>
-  <p class="video-hint">Click the gold button above to play with sound</p>
-  <p class="video-desc">David introduces DAVIDS LUXE ESTATE and luxury on the Island</p>
-</div>
+  <!-- ABOUT ME SECTION START -->
+  <section id="about" style="padding: 80px 20px; background: #ffffff;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 50px; flex-wrap: wrap;">
 
-<div class="section">
-  <h2 class="section-title">FROM OUR PARTNER</h2>
-  <div class="video-wrapper">
-    <button class="unmute-btn" onclick="playUnmute('v2')">🔊 TAP FOR SOUND</button>
-    <video id="v2" controls>
-      <source src="david-video2.mp4.mp4" type="video/mp4">
-    </video>
-  </div>
-  <p class="video-hint">Click the gold button above to play with sound</p>
-  <p class="video-desc">International client discusses luxury houses in Lagos Island and Banana Island</p>
-</div>
+      <!-- LEFT: BUSINESSMAN PHOTO -->
+      <div style="flex: 1 1 400px; text-align: center;">
+        <img
+          src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=774&auto=format&fit=crop"
+          alt="David CEO David's LUXE ESTATES"
+          style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); object-fit: cover;"
+        />
+      </div>
 
-<div class="section">
-  <h2 class="section-title">HOW WE GROW BUSINESS</h2>
-  <div class="video-wrapper">
-    <button class="unmute-btn" onclick="playUnmute('v3')">🔊 TAP FOR SOUND</button>
-    <video id="v3" controls>
-      <source src="david-video3.mp4.mp4" type="video/mp4">
-    </video>
-  </div>
-  <p class="video-hint">Click the gold button above to play with sound</p>
-  <p class="video-desc">10 minute testimonial: How David Paul's website transformed our business</p>
-</div>
+      <!-- RIGHT: ABOUT TEXT -->
+      <div style="flex: 1 1 500px;">
+        <h2 style="font-size: 36px; font-weight: 700; color: #111; margin-bottom: 8px;">About Me</h2>
+        <h3 style="font-size: 18px; font-weight: 500; color: #D4AF37; margin-bottom: 20px;">CEO & Founder - David's LUXE ESTATES</h3>
 
-<div class="section">
-  <a href="https://wa.me/2347026558433" target="_blank" class="wa-btn">💬 WHATSAPP DAVID NOW</a>
-</div>
+        <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 16px;">
+          I'm <strong>David</strong>, a real estate investor helping people in Lagos buy and sell premium properties with zero stress.
+        </p>
 
-<script>
-// THIS FORCES PLAY + SOUND IN 1 CLICK
-function playUnmute(videoId) {
-  const vid = document.getElementById(videoId);
-  vid.muted = false;
-  vid.play();
-}
-</script>
+        <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 16px;">
+          With over <strong>8 years experience</strong>, David's LUXE ESTATES connects buyers to verified deals, secure locations, and properties that actually appreciate.
+        </p>
+
+        <p style="font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 30px;">
+          My mission is simple: Make real estate investment in Nigeria safe, transparent, and profitable for you.
+          <br><br>
+          Let's build your property portfolio together with David's LUXE ESTATES.
+        </p>
+
+        <!-- BUTTON -->
+        <a
+          href="https://wa.me/2348012345678"
+          target="_blank"
+          style="display: inline-block; padding: 14px 32px; background: #111; color: #fff; border-radius: 8px; font-weight: 600; font-size: 16px; transition: 0.3s;"
+          onmouseover="this.style.background='#D4AF37'"
+          onmouseout="this.style.background='#111'"
+        >
+          Book a Call with David
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <!-- ABOUT ME SECTION END -->
+
+  <!-- TESTIMONIALS SECTION START -->
+  <section id="testimonials" style="padding: 80px 20px; background: #F8F8F8;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      
+      <h2 style="font-size: 36px; font-weight: 700; color: #111; margin-bottom: 12px;">What Our Clients Say</h2>
+      <p style="font-size: 16px; color: #666; margin-bottom: 50px;">Real results from real investors with David's LUXE ESTATES</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+
+        <!-- TESTIMONIAL 1 -->
+        <div style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: left;">
+          <p style="font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 20px;">
+            "David made my first property purchase in Lekki so smooth. Verified everything, no hidden charges. 8 years experience really shows. Highly recommend David's LUXE ESTATES!"
+          </p>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <img src="https://i.pravatar.cc/50?img=1" style="width: 50px; height: 50px; border-radius: 50%;">
+            <div>
+              <h4 style="font-size: 16px; font-weight: 600; color: #111;">Adebayo T.</h4>
+              <p style="font-size: 13px; color: #888;">Lekki Property Investor</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TESTIMONIAL 2 -->
+        <div style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: left;">
+          <p style="font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 20px;">
+            "I was skeptical about real estate in Lagos. But David's team handled everything from paperwork to allocation. Got 40% ROI in 18 months. This is LUXE service."
+          </p>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <img src="https://i.pravatar.cc/50?img=5" style="width: 50px; height: 50px; border-radius: 50%;">
+            <div>
+              <h4 style="font-size: 16px; font-weight: 600; color: #111;">Chioma O.</h4>
+              <p style="font-size: 13px; color: #888;">Diaspora Investor, UK</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TESTIMONIAL 3 -->
+        <div style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: left;">
+          <p style="font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 20px;">
+            "Professional, transparent, and fast. David's LUXE ESTATES sold my Victoria Island apartment in 3 weeks. Got above asking price. Will work with them again."
+          </p>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <img src="https://i.pravatar.cc/50?img=8" style="width: 50px; height: 50px; border-radius: 50%;">
+            <div>
+              <h4 style="font-size: 16px; font-weight: 600; color: #111;">Michael E.</h4>
+              <p style="font-size: 13px; color: #888;">VI Landlord</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- TESTIMONIALS SECTION END -->
+
+  <!-- PASTE YOUR OTHER SECTIONS HERE -->
+  <!-- <section id="properties">... </section> -->
+
+  <!-- FOOTER -->
+  <footer style="padding: 40px 20px; text-align: center; background: #111; color: #fff;">
+    <p>© 2026 David's LUXE ESTATES. All Rights Reserved. | Lagos, Nigeria</p>
+  </footer>
 
 </body>
 </html>
