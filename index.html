@@ -7,30 +7,51 @@
 <style>
     * { margin:0; padding:0; box-sizing:border-box; }
   body { background:#0a0a0a; color:#fff; font-family: 'Segoe UI', sans-serif; }
-  .page-bg-logo { display:none; } /* TEMP: REMOVED BACKGROUND COMPLETELY */
-  .section { padding:80px 20px; max-width:1000px; margin:0 auto; text-align:center; }
-  .section-title { font-size:44px; color:#D4AF37; margin-bottom:30px; }
-  .video-wrapper { max-width:900px; margin:0 auto 40px auto; }
+  .page-bg-logo { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); width:120vw; height:120vh; opacity:0.20; z-index:-1; pointer-events:none; }
+  .section { padding:100px 20px; max-width:1000px; margin:0 auto; text-align:center; }
+  .section-title { font-size:44px; color:#D4AF37; margin-bottom:40px; }
+  .video-wrapper { max-width:900px; margin:0 auto 50px auto; position:relative; }
   .video-wrapper video { width:100%; border:3px solid #D4AF37; border-radius:16px; }
+  .unmute-btn { position:absolute; top:15px; right:15px; z-index:9999; background:rgba(0,0,0,0.8); color:#D4AF37; border:2px solid #D4AF37; padding:10px 20px; border-radius:50px; font-weight:800; cursor:pointer; }
   .wa-btn { display:inline-block; background:#25D366; color:#fff; padding:20px 55px; border-radius:50px; text-decoration:none; font-weight:800; margin-top:30px; }
 </style>
 </head>
 <body>
 
-<div class="content">
-  <div class="section">
-    <h2 class="section-title">TEST VIDEO 1</h2>
-    <div class="video-wrapper">
-      <video controls>
-        <source src="david.video1.mp4.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
+<img src="1000064284.png" class="page-bg-logo" alt="Davids Luxe Estate">
 
-  <div class="section">
-    <h2 class="section-title">GET IN TOUCH</h2>
-    <a href="https://wa.me/2347026558433" target="_blank" class="wa-btn">💬 WHATSAPP DAVID NOW</a>
+<div class="section">
+  <h2 class="section-title">MEET DAVID</h2>
+  <div class="video-wrapper">
+    <button class="unmute-btn" onclick="document.getElementById('v1').muted=false">🔊 UNMUTE</button>
+    <video id="v1" controls>
+      <source src="david-video1.mp4.mp4" type="video/mp4"> <!-- DASH HERE -->
+    </video>
   </div>
+</div>
+
+<div class="section">
+  <h2 class="section-title">FROM OUR PARTNER</h2>
+  <div class="video-wrapper">
+    <button class="unmute-btn" onclick="document.getElementById('v2').muted=false">🔊 UNMUTE</button>
+    <video id="v2" controls>
+      <source src="david-video2.mp4.mp4" type="video/mp4"> <!-- DASH HERE -->
+    </video>
+  </div>
+</div>
+
+<div class="section">
+  <h2 class="section-title">HOW WE GROW BUSINESS</h2>
+  <div class="video-wrapper">
+    <button class="unmute-btn" onclick="document.getElementById('v3').muted=false">🔊 UNMUTE</button>
+    <video id="v3" controls>
+      <source src="david-video3.mp4.mp4" type="video/mp4"> <!-- DASH HERE -->
+    </video>
+  </div>
+</div>
+
+<div class="section">
+  <a href="https://wa.me/2347026558433" target="_blank" class="wa-btn">💬 WHATSAPP DAVID NOW</a>
 </div>
 
 </body>
