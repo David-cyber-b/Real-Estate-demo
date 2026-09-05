@@ -12,7 +12,7 @@
   .section-title { font-size:44px; color:#D4AF37; margin-bottom:40px; letter-spacing:4px; font-weight:700; }
   .video-wrapper { max-width:900px; margin:0 auto 50px auto; position:relative; }
   .video-wrapper video { width:100%; border:3px solid #D4AF37; border-radius:16px; background:#000; }
-  .unmute-btn { position:absolute; top:15px; right:15px; z-index:9999; background:rgba(0,0,0,0.8); color:#D4AF37; border:2px solid #D4AF37; padding:10px 20px; border-radius:50px; font-weight:800; cursor:pointer; }
+  .unmute-btn { position:absolute; top:15px; right:15px; z-index:9999; background:rgba(0,0,0,0.8); color:#D4AF37; border:2px solid #D4AF37; padding:12px 22px; border-radius:50px; font-weight:800; cursor:pointer; font-size:15px; }
   .unmute-btn:hover { background:#D4AF37; color:#000; }
   .video-hint { color:#D4AF37; margin-top:12px; font-size:15px; font-weight:600; }
   .video-desc { color:#aaa; margin-top:8px; font-size:16px; margin-bottom:40px; }
@@ -26,42 +26,51 @@
 <div class="section">
   <h2 class="section-title">MEET DAVID</h2>
   <div class="video-wrapper">
-    <button class="unmute-btn" onclick="document.getElementById('v1').muted=false">🔊 UNMUTE</button>
+    <button class="unmute-btn" onclick="playUnmute('v1')">🔊 TAP FOR SOUND</button>
     <video id="v1" controls>
       <source src="david-video1.mp4.mp4" type="video/mp4">
     </video>
   </div>
-  <p class="video-hint">▶️ STEP 1: Click PLAY → STEP 2: Click UNMUTE 🔊</p>
+  <p class="video-hint">Click the gold button above to play with sound</p>
   <p class="video-desc">David introduces DAVIDS LUXE ESTATE and luxury on the Island</p>
 </div>
 
 <div class="section">
   <h2 class="section-title">FROM OUR PARTNER</h2>
   <div class="video-wrapper">
-    <button class="unmute-btn" onclick="document.getElementById('v2').muted=false">🔊 UNMUTE</button>
+    <button class="unmute-btn" onclick="playUnmute('v2')">🔊 TAP FOR SOUND</button>
     <video id="v2" controls>
       <source src="david-video2.mp4.mp4" type="video/mp4">
     </video>
   </div>
-  <p class="video-hint">▶️ STEP 1: Click PLAY → STEP 2: Click UNMUTE 🔊</p>
+  <p class="video-hint">Click the gold button above to play with sound</p>
   <p class="video-desc">International client discusses luxury houses in Lagos Island and Banana Island</p>
 </div>
 
 <div class="section">
   <h2 class="section-title">HOW WE GROW BUSINESS</h2>
   <div class="video-wrapper">
-    <button class="unmute-btn" onclick="document.getElementById('v3').muted=false">🔊 UNMUTE</button>
+    <button class="unmute-btn" onclick="playUnmute('v3')">🔊 TAP FOR SOUND</button>
     <video id="v3" controls>
       <source src="david-video3.mp4.mp4" type="video/mp4">
     </video>
   </div>
-  <p class="video-hint">▶️ STEP 1: Click PLAY → STEP 2: Click UNMUTE 🔊</p>
+  <p class="video-hint">Click the gold button above to play with sound</p>
   <p class="video-desc">10 minute testimonial: How David Paul's website transformed our business</p>
 </div>
 
 <div class="section">
   <a href="https://wa.me/2347026558433" target="_blank" class="wa-btn">💬 WHATSAPP DAVID NOW</a>
 </div>
+
+<script>
+// THIS FORCES PLAY + SOUND IN 1 CLICK
+function playUnmute(videoId) {
+  const vid = document.getElementById(videoId);
+  vid.muted = false;
+  vid.play();
+}
+</script>
 
 </body>
 </html>
