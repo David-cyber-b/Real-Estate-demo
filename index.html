@@ -89,7 +89,7 @@
       position: fixed;
       bottom: 25px;
       right: 25px;
-      background: #25D366; /* WhatsApp green */
+      background: #25D366;
       color: #fff;
       border-radius: 50%;
       width: 60px;
@@ -135,6 +135,33 @@
       backdrop-filter: blur(5px);
       padding: 30px;
     }
+    
+    /* WHY CHOOSE US GRID */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    
+    .why-card {
+      background: rgba(0,0,0,0.75);
+      border: 1px solid #FFD700;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    
+    .why-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+    }
+    
+    .why-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
   </style>
 </head>
 <body>
@@ -153,7 +180,7 @@
   </div>
 
   <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/2347026558433?text=Hello%20David%2C%20I%20am%20interested%20in%20your%20premium%20properties" 
+  <a href="https://wa.me/2348012345678?text=Hello%20David%2C%20I%20am%20interested%20in%20your%20premium%20properties" 
      target="_blank" 
      class="whatsapp-float"
      title="Chat with us on WhatsApp">
@@ -183,10 +210,82 @@
           <br><br>
           <em class="gold">Where Luxury Meets Lifestyle</em>
         </p>
-        <a href="https://wa.me/2347926558433?text=Hello%20David%2C%20I%20am%20interested%20in%20your%20premium%20properties" target="_blank"
+        <a href="https://wa.me/2348012345678?text=Hello%20David%2C%20I%20am%20interested%20in%20your%20premium%20properties" target="_blank"
           class="gold-btn"
           style="display: inline-block; padding: 14px 32px; border-radius: 8px; font-size: 16px;">
           Book a Call with David
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US SECTION - NEW -->
+  <section id="why-us">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <h2 style="font-size: 40px; font-weight: 700; color: #fff; margin-bottom: 12px;">Why Choose <span class="gold">DAVID'S LUXE ESTATE</span>?</h2>
+      <p style="font-size: 18px; color: #FFD700; margin-bottom: 20px;">Your comfort, security, and profit is our priority</p>
+      
+      <div class="why-grid">
+        <!-- CARD 1 -->
+        <div class="why-card">
+          <div class="why-icon">🛡️</div>
+          <h3 style="font-size: 22px; color: #FFD700; margin-bottom: 12px;">100% Security & Verification</h3>
+          <p style="font-size: 15px; line-height: 1.7; color: #eee;">
+            Every property is verified. No fake documents, no fraud. We ensure your investment is in a secure, government-approved estate with 24/7 security.
+          </p>
+        </div>
+        
+        <!-- CARD 2 -->
+        <div class="why-card">
+          <div class="why-icon">🎁</div>
+          <h3 style="font-size: 22px; color: #FFD700; margin-bottom: 12px;">Exclusive Bonuses</h3>
+          <p style="font-size: 15px; line-height: 1.7; color: #eee;">
+            Get up to <strong>5% discount</strong> + <strong>Free legal documentation</strong> + <strong>1 year estate dues paid</strong> when you buy with us this month.
+          </p>
+        </div>
+        
+        <!-- CARD 3 -->
+        <div class="why-card">
+          <div class="why-icon">😌</div>
+          <h3 style="font-size: 22px; color: #FFD700; margin-bottom: 12px;">Comfort & Peace of Mind</h3>
+          <p style="font-size: 15px; line-height: 1.7; color: #eee;">
+            We handle everything: inspections, paperwork, negotiations. You get a stress-free buying experience in serene, comfortable environments.
+          </p>
+        </div>
+        
+        <!-- CARD 4 -->
+        <div class="why-card">
+          <div class="why-icon">📈</div>
+          <h3 style="font-size: 22px; color: #FFD700; margin-bottom: 12px;">High ROI Properties</h3>
+          <p style="font-size: 15px; line-height: 1.7; color: #eee;">
+            We only show you properties in fast-developing areas of Lagos. Invest where land value grows 40-60% in 2 years. Build real wealth.
+          </p>
+        </div>
+        
+        <!-- CARD 5 -->
+        <div class="why-card">
+          <div class="why-icon">🤝</div>
+          <h3 style="font-size: 22px; color: #FFD700; margin-bottom: 12px;">Transparent Process</h3>
+          <p style="font-size: 15px; line-height: 1.7; color: #eee;">
+            No hidden fees. No pressure. We walk you through every step so you buy with confidence and full clarity.
+          </p>
+        </div>
+        
+        <!-- CARD 6 -->
+        <div class="why-card">
+          <div class="why-icon">🏡</div>
+          <h3 style="font-size: 22px; color: #FFD700; margin-bottom: 12px;">Prime Locations</h3>
+          <p style="font-size: 15px; line-height: 1.7; color: #eee;">
+            Properties in Lekki, Ikoyi, VI, Ibeju-Lekki and other secured estates with good roads, water, light and premium neighborhood.
+          </p>
+        </div>
+      </div>
+      
+      <div style="margin-top: 50px;">
+        <a href="https://wa.me/2348012345678?text=Hello%20David%2C%20I%20want%20to%20claim%20my%20bonus" target="_blank"
+          class="gold-btn"
+          style="display: inline-block; padding: 16px 40px; border-radius: 8px; font-size: 18px;">
+          Claim Your Bonus Today
         </a>
       </div>
     </div>
