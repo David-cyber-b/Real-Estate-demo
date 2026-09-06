@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -13,7 +14,7 @@
       background: #000000 url('1000064679.png') no-repeat center center fixed; 
       background-size: cover; 
       color: #fff; 
-      padding-top: 50px; /* space for welcome bar */
+      padding-top: 160px; /* space for welcome bar + logo */
     }
     
     body::before {
@@ -55,6 +56,34 @@
       to { transform: translateX(-100%); }
     }
     
+    /* LOGO CIRCLE UNDER WELCOME TEXT */
+    .logo-circle-wrap {
+      position: fixed;
+      top: 55px; /* sits just under welcome bar */
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 998;
+      text-align: center;
+    }
+    
+    .logo-circle {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%; /* MAKES IT CIRCLE */
+      border: 3px solid #FFD700;
+      box-shadow: 0 0 20px rgba(255,215,0,0.6);
+      object-fit: cover;
+      background: #000;
+    }
+    
+    .logo-text {
+      color: #FFD700;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 5px;
+      letter-spacing: 1px;
+    }
+    
     section { padding: 80px 20px; position: relative; z-index: 2; }
     a { text-decoration: none; }
     
@@ -83,6 +112,12 @@
     <div class="welcome-text">
       ✨ Welcome to DAVIDS LUXE ESTATE • Where Luxury Meets Lifestyle • LIVE • INVEST • PROSPER • Your Premium Real Estate Partner in Lagos ✨
     </div>
+  </div>
+
+  <!-- LOGO CIRCLE UNDER WELCOME TEXT -->
+  <div class="logo-circle-wrap">
+    <img src="1000064679.png" alt="DAVIDS LUXE ESTATE Logo" class="logo-circle" />
+    <div class="logo-text">DAVIDS LUXE ESTATE</div>
   </div>
 
   <!-- ABOUT ME SECTION -->
