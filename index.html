@@ -7,8 +7,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', Arial, sans-serif; background: #fff; color: #111; }
+    body { font-family: 'Inter', Arial, sans-serif; background: #ffffff; color: #111; position: relative; }
     a { text-decoration: none; }
+    
+    /* LOGO WATERMARK FOR WHOLE PAGE */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: url('1000064284.png') no-repeat center;
+      background-size: contain;
+      opacity: 0.04;
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    /* Make sure content sits above watermark */
+    section, footer {
+      position: relative;
+      z-index: 2;
+    }
   </style>
 </head>
 <body>
@@ -65,7 +87,7 @@
   <!-- ABOUT ME SECTION END -->
 
   <!-- TESTIMONIALS SECTION START -->
-  <section id="testimonials" style="padding: 80px 20px; background: #F8F8F8;">
+  <section id="testimonials" style="padding: 80px 20px; background: #ffffff;">
     <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
       
       <h2 style="font-size: 36px; font-weight: 700; color: #111; margin-bottom: 12px;">What Our Clients Say</h2>
@@ -74,7 +96,7 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
 
         <!-- TESTIMONIAL 1 -->
-        <div style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: left;">
+        <div style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: left; border: 1px solid #eee;">
           <p style="font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 20px;">
             "David made my first property purchase in Lekki so smooth. Verified everything, no hidden charges. 8 years experience really shows. Highly recommend David's LUXE ESTATES!"
           </p>
@@ -88,7 +110,7 @@
         </div>
 
         <!-- TESTIMONIAL 2 -->
-        <div style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: left;">
+        <div style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: left; border: 1px solid #eee;">
           <p style="font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 20px;">
             "I was skeptical about real estate in Lagos. But David's team handled everything from paperwork to allocation. Got 40% ROI in 18 months. This is LUXE service."
           </p>
@@ -102,7 +124,7 @@
         </div>
 
         <!-- TESTIMONIAL 3 -->
-        <div style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: left;">
+        <div style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: left; border: 1px solid #eee;">
           <p style="font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 20px;">
             "Professional, transparent, and fast. David's LUXE ESTATES sold my Victoria Island apartment in 3 weeks. Got above asking price. Will work with them again."
           </p>
@@ -124,7 +146,7 @@
   <!-- <section id="properties">... </section> -->
 
   <!-- FOOTER -->
-  <footer style="padding: 40px 20px; text-align: center; background: #111; color: #fff;">
+  <footer style="padding: 40px 20px; text-align: center; background: #111; color: #fff; position: relative; z-index: 2;">
     <p>© 2026 David's LUXE ESTATES. All Rights Reserved. | Lagos, Nigeria</p>
   </footer>
 
