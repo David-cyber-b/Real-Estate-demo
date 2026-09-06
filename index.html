@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,26 +10,54 @@
     
     body { 
       font-family: 'Inter', Arial, sans-serif; 
-      /* YOUR LOGO AS FULL BACKGROUND */
       background: #000000 url('1000064679.png') no-repeat center center fixed; 
-      background-size: cover; /* COVERS WHOLE WEBSITE */
+      background-size: cover; 
       color: #fff; 
+      padding-top: 50px; /* space for welcome bar */
     }
     
-    /* DARK OVERLAY - MAKES LOGO BOLD BUT TEXT READABLE */
     body::before {
       content: "";
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0,0,0,0.55); /* 55% opacity */
+      background: rgba(0,0,0,0.55); 
       z-index: -1;
+    }
+    
+    /* WELCOMING MOVING TEXT AT TOP */
+    .welcome-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.85);
+      border-bottom: 2px solid #FFD700;
+      z-index: 999;
+      overflow: hidden;
+      height: 50px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .welcome-text {
+      white-space: nowrap;
+      color: #FFD700;
+      font-size: 18px;
+      font-weight: 600;
+      padding-left: 100%;
+      animation: moveText 15s linear infinite;
+      text-shadow: 0 0 10px rgba(255,215,0,0.5);
+    }
+    
+    @keyframes moveText {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
     }
     
     section { padding: 80px 20px; position: relative; z-index: 2; }
     a { text-decoration: none; }
     
-    /* GOLD ACCENTS TO MATCH LOGO */
     .gold { color: #FFD700; }
     .gold-btn { 
       background: #FFD700; 
@@ -40,7 +67,6 @@
     }
     .gold-btn:hover { background: #fff; }
     
-    /* GLASS CARDS FOR READABILITY */
     .card {
       background: rgba(0,0,0,0.70);
       border: 1px solid #FFD700;
@@ -51,6 +77,13 @@
   </style>
 </head>
 <body>
+
+  <!-- MOVING WELCOME TEXT -->
+  <div class="welcome-bar">
+    <div class="welcome-text">
+      ✨ Welcome to DAVIDS LUXE ESTATE • Where Luxury Meets Lifestyle • LIVE • INVEST • PROSPER • Your Premium Real Estate Partner in Lagos ✨
+    </div>
+  </div>
 
   <!-- ABOUT ME SECTION -->
   <section id="about">
