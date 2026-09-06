@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>David's LUXE ESTATES - Premium Real Estate in Lagos</title>
+  <title>DAVIDS LUXE ESTATE - Premium Real Estate in Lagos</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -11,19 +11,19 @@
     
     body { 
       font-family: 'Inter', Arial, sans-serif; 
-      /* YOUR EXACT RED LOGO AS FULL BACKGROUND */
-      background: #B00000 url('wa_image_8438655841447723951') no-repeat center center fixed; 
-      background-size: cover; /* COVERS WHOLE PAGE */
-      color: #fff; /* WHITE TEXT SO IT POPS ON RED */
+      /* YOUR LOGO AS FULL BACKGROUND */
+      background: #000000 url('1000064679.png') no-repeat center center fixed; 
+      background-size: cover; /* COVERS WHOLE WEBSITE */
+      color: #fff; 
     }
     
-    /* DARK RED OVERLAY TO MAKE TEXT READABLE BUT KEEP COLOR BOLD */
+    /* DARK OVERLAY - MAKES LOGO BOLD BUT TEXT READABLE */
     body::before {
       content: "";
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(176,0,0,0.65); /* 65% opacity - BOLD BUT READABLE */
+      background: rgba(0,0,0,0.55); /* 55% opacity */
       z-index: -1;
     }
     
@@ -31,9 +31,23 @@
     a { text-decoration: none; }
     
     /* GOLD ACCENTS TO MATCH LOGO */
-    .gold { color: #D4AF37; }
-    .gold-btn { background: #D4AF37; color: #B00000; }
+    .gold { color: #FFD700; }
+    .gold-btn { 
+      background: #FFD700; 
+      color: #000; 
+      font-weight: 700;
+      transition: 0.3s;
+    }
     .gold-btn:hover { background: #fff; }
+    
+    /* GLASS CARDS FOR READABILITY */
+    .card {
+      background: rgba(0,0,0,0.70);
+      border: 1px solid #FFD700;
+      border-radius: 16px;
+      backdrop-filter: blur(5px);
+      padding: 30px;
+    }
   </style>
 </head>
 <body>
@@ -43,27 +57,27 @@
     <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 50px; flex-wrap: wrap;">
       <div style="flex: 1 1 400px; text-align: center;">
         <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=774&auto=format&fit=crop"
-          alt="David CEO David's LUXE ESTATES"
-          style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); border: 3px solid #D4AF37; object-fit: cover;"
+          alt="David CEO DAVIDS LUXE ESTATE"
+          style="width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 10px 30px rgba(255,215,0,0.4); border: 2px solid #FFD700; object-fit: cover;"
         />
       </div>
-      <div style="flex: 1 1 500px;">
+      <div style="flex: 1 1 500px;" class="card">
         <h2 style="font-size: 40px; font-weight: 700; color: #fff; margin-bottom: 8px;">About Me</h2>
-        <h3 style="font-size: 20px; font-weight: 600; color: #D4AF37; margin-bottom: 20px;">CEO & Founder - David's LUXE ESTATES</h3>
-        <p style="font-size: 16px; line-height: 1.8; color: #F5F5F5; margin-bottom: 16px;">
+        <h3 style="font-size: 20px; font-weight: 600; color: #FFD700; margin-bottom: 20px;">CEO & Founder - DAVIDS LUXE ESTATE</h3>
+        <p style="font-size: 16px; line-height: 1.8; color: #eee; margin-bottom: 16px;">
           I'm <strong class="gold">David</strong>, a real estate investor helping people in Lagos buy and sell premium properties with zero stress.
         </p>
-        <p style="font-size: 16px; line-height: 1.8; color: #F5F5F5; margin-bottom: 16px;">
-          With over <strong class="gold">8 years experience</strong>, David's LUXE ESTATES connects buyers to verified deals, secure locations, and properties that actually appreciate.
+        <p style="font-size: 16px; line-height: 1.8; color: #eee; margin-bottom: 16px;">
+          With over <strong class="gold">8 years experience</strong>, DAVIDS LUXE ESTATE connects buyers to verified deals, secure locations, and properties that actually appreciate.
         </p>
-        <p style="font-size: 16px; line-height: 1.8; color: #F5F5F5; margin-bottom: 30px;">
-          My mission is simple: Make real estate investment in Nigeria safe, transparent, and profitable for you.
+        <p style="font-size: 16px; line-height: 1.8; color: #eee; margin-bottom: 30px;">
+          My mission: <span class="gold">LIVE • INVEST • PROSPER</span>. Make real estate investment in Nigeria safe, transparent, and profitable.
           <br><br>
-          Let's build your property portfolio together with David's LUXE ESTATES.
+          <em class="gold">Where Luxury Meets Lifestyle</em>
         </p>
         <a href="https://wa.me/2348012345678" target="_blank"
           class="gold-btn"
-          style="display: inline-block; padding: 14px 32px; border-radius: 8px; font-weight: 700; font-size: 16px;">
+          style="display: inline-block; padding: 14px 32px; border-radius: 8px; font-size: 16px;">
           Book a Call with David
         </a>
       </div>
@@ -71,30 +85,30 @@
   </section>
 
   <!-- TESTIMONIALS SECTION -->
-  <section id="testimonials" style="background: rgba(0,0,0,0.25);">
+  <section id="testimonials">
     <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
       <h2 style="font-size: 36px; font-weight: 700; color: #fff; margin-bottom: 12px;">What Our Clients Say</h2>
-      <p style="font-size: 16px; color: #D4AF37; margin-bottom: 50px;">Real results from real investors</p>
+      <p style="font-size: 16px; color: #FFD700; margin-bottom: 50px;">Real results from real investors</p>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-        <div style="background: rgba(255,255,255,0.10); padding: 30px; border-radius: 16px; border: 1px solid #D4AF37;">
+        <div class="card">
           <p style="font-size: 15px; line-height: 1.7; color: #fff; margin-bottom: 20px;">"David made my first property purchase in Lekki so smooth. Verified everything. Highly recommend!"</p>
-          <h4 style="font-size: 16px; font-weight: 600; color: #D4AF37;">Adebayo T.</h4>
+          <h4 style="font-size: 16px; font-weight: 600; color: #FFD700;">Adebayo T.</h4>
         </div>
-        <div style="background: rgba(255,255,255,0.10); padding: 30px; border-radius: 16px; border: 1px solid #D4AF37;">
+        <div class="card">
           <p style="font-size: 15px; line-height: 1.7; color: #fff; margin-bottom: 20px;">"Got 40% ROI in 18 months. This is LUXE service. David's team handled everything."</p>
-          <h4 style="font-size: 16px; font-weight: 600; color: #D4AF37;">Chioma O.</h4>
+          <h4 style="font-size: 16px; font-weight: 600; color: #FFD700;">Chioma O.</h4>
         </div>
-        <div style="background: rgba(255,255,255,0.10); padding: 30px; border-radius: 16px; border: 1px solid #D4AF37;">
+        <div class="card">
           <p style="font-size: 15px; line-height: 1.7; color: #fff; margin-bottom: 20px;">"Sold my VI apartment in 3 weeks. Got above asking price. Professional and fast."</p>
-          <h4 style="font-size: 16px; font-weight: 600; color: #D4AF37;">Michael E.</h4>
+          <h4 style="font-size: 16px; font-weight: 600; color: #FFD700;">Michael E.</h4>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer style="padding: 40px 20px; text-align: center; background: #B00000; color: #D4AF37; border-top: 2px solid #D4AF37;">
-    <p>© 2026 David's LUXE ESTATES. All Rights Reserved. | Lagos, Nigeria</p>
+  <footer style="padding: 40px 20px; text-align: center; background: #000; color: #FFD700; border-top: 2px solid #FFD700;">
+    <p>© 2026 DAVIDS LUXE ESTATE. All Rights Reserved. | Lagos, Nigeria</p>
   </footer>
 
 </body>
