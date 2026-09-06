@@ -11,10 +11,10 @@
     
     body { 
       font-family: 'Inter', Arial, sans-serif; 
-      background: #000000 url('1000064679.png') no-repeat center center fixed; 
+      background: #000000 url('1000064679.png') no-repeat center fixed; 
       background-size: cover; 
       color: #fff; 
-      padding-top: 160px; /* space for welcome bar + logo */
+      padding-top: 160px;
     }
     
     body::before {
@@ -59,7 +59,7 @@
     /* LOGO CIRCLE UNDER WELCOME TEXT */
     .logo-circle-wrap {
       position: fixed;
-      top: 55px; /* sits just under welcome bar */
+      top: 55px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 998;
@@ -69,7 +69,7 @@
     .logo-circle {
       width: 90px;
       height: 90px;
-      border-radius: 50%; /* MAKES IT CIRCLE */
+      border-radius: 50%;
       border: 3px solid #FFD700;
       box-shadow: 0 0 20px rgba(255,215,0,0.6);
       object-fit: cover;
@@ -82,6 +82,38 @@
       font-weight: 600;
       margin-top: 5px;
       letter-spacing: 1px;
+    }
+    
+    /* FLOATING WHATSAPP BUTTON */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366; /* WhatsApp green */
+      color: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+      z-index: 1000;
+      transition: 0.3s;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+    
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(37,211,102,0.6);
+    }
+    
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(37,211,102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102, 0); }
     }
     
     section { padding: 80px 20px; position: relative; z-index: 2; }
@@ -120,6 +152,14 @@
     <div class="logo-text">DAVIDS LUXE ESTATE</div>
   </div>
 
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/2348012345678?text=Hello%20David%2C%20I%20am%20interested%20in%20your%20premium%20properties" 
+     target="_blank" 
+     class="whatsapp-float"
+     title="Chat with us on WhatsApp">
+     💬
+  </a>
+
   <!-- ABOUT ME SECTION -->
   <section id="about">
     <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 50px; flex-wrap: wrap;">
@@ -143,7 +183,7 @@
           <br><br>
           <em class="gold">Where Luxury Meets Lifestyle</em>
         </p>
-        <a href="https://wa.me/2348012345678" target="_blank"
+        <a href="https://wa.me/2347926558433?text=Hello%20David%2C%20I%20am%20interested%20in%20your%20premium%20properties" target="_blank"
           class="gold-btn"
           style="display: inline-block; padding: 14px 32px; border-radius: 8px; font-size: 16px;">
           Book a Call with David
