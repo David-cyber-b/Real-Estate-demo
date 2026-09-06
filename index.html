@@ -1,4 +1,5 @@
-html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,19 @@ html lang="en">
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { 
       font-family: 'Inter', Arial, sans-serif; 
-      background: #ffffff url('1000064656.png') no-repeat center center fixed; 
-      background-size: 550px;
+      background: #ffffff url('1000064656.png') no-repeat center fixed; 
+      background-size: 650px; /* BIGGER */
       color: #111; 
     }
     a { text-decoration: none; }
     
-    /* White overlay so text is readable over the red/gold logo */
+    /* Less white overlay so logo shows better */
     body::after {
       content: "";
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(255,255,255,0.93);
+      background: rgba(255,255,255,0.75); /* WAS 0.93, NOW 0.75 */
       z-index: -1;
     }
     
