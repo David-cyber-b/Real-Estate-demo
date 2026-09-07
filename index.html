@@ -3,64 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DAVIDS LUXE ESTATE</title>
+<title>DAVIDS LUXE ESTATE - Luxury Properties in Lagos</title>
 <style>
-  body { margin:0; font-family:Arial; background:#0a0a0a; color:white; }
-  header { background:linear-gradient(135deg, #FFD700, #FFA500); padding:80px 20px; text-align:center; }
-  header h1 { font-size:45px; color:#000; margin:0; }
-  header p { color:#000; font-size:20px; }
-  .btn { background:#000; color:#FFD700; padding:14px 28px; border-radius:8px; text-decoration:none; font-weight:bold; display:inline-block; margin-top:15px; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Segoe UI', Arial; background:#0a0a0a; color:white; overflow-x:hidden; }
+  
+  /* MOVING WELCOME BAR */
+  .ticker { background:#FFD700; color:#000; padding:10px 0; font-weight:bold; overflow:hidden; white-space:nowrap; }
+  .ticker span { display:inline-block; padding-left:100%; animation:move 15s linear infinite; }
+  @keyframes move { from { transform:translateX(0); } to { transform:translateX(-100%); } }
+  
+  /* HEADER WITH LOGO BACKGROUND */
+  header { 
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('1000065031.jpg') center/cover;
+    padding:100px 20px; text-align:center; border-bottom:3px solid #FFD700;
+  }
+  .logo-circle { 
+    width:120px; height:120px; border-radius:50%; border:3px solid #FFD700; 
+    margin:0 auto 20px; background:#000; display:flex; align-items:center; justify-content:center;
+    font-size:40px; font-weight:bold; color:#FFD700;
+  }
+  header h1 { font-size:45px; color:#FFD700; margin:10px 0; }
+  header p { font-size:20px; color:#fff; }
+  .btn { background:#FFD700; color:#000; padding:14px 28px; border-radius:8px; text-decoration:none; font-weight:bold; display:inline-block; margin-top:20px; transition:0.3s; }
+  .btn:hover { transform:scale(1.05); }
+  
   section { padding:60px 20px; max-width:1200px; margin:auto; }
-  h2 { text-align:center; font-size:32px; color:#FFD700; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:25px; margin-top:30px; }
+  h2 { text-align:center; font-size:32px; color:#FFD700; margin-bottom:30px; }
+  
+  /* ABOUT ME */
+  .about { display:flex; gap:30px; align-items:center; flex-wrap:wrap; }
+  .about img { width:300px; height:300px; border-radius:12px; border:2px solid #FFD700; object-fit:cover; }
+  .about-text { flex:1; min-width:300px; }
+  
+  /* WHY CHOOSE US */
+  .why { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; }
+  .why-card { background:#1a1a1a; padding:25px; border-radius:10px; border-left:4px solid #FFD700; }
+  
+  /* PROPERTIES */
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:25px; }
   .card { background:#1a1a1a; border-radius:12px; overflow:hidden; border:1px solid #FFD700; transition:0.3s; }
   .card:hover { transform:scale(1.03); }
   .card img { width:100%; height:260px; object-fit:cover; }
   .card-content { padding:20px; }
   .price { color:#FFD700; font-size:20px; font-weight:bold; }
-  footer { text-align:center; padding:30px; background:#000; color:#FFD700; }
+  
+  /* TESTIMONIALS */
+  .testimonials { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px; }
+  .testimonial { background:#1a1a1a; padding:25px; border-radius:10px; border:1px solid #FFD700; font-style:italic; }
+  .testimonial b { color:#FFD700; font-style:normal; }
+  
+  /* CONTACT */
+  .contact { text-align:center; background:#1a1a1a; padding:40px; border-radius:12px; border:2px solid #FFD700; }
+  .contact-number { font-size:28px; color:#FFD700; font-weight:bold; margin:15px 0; }
+  
+  footer { text-align:center; padding:30px; background:#000; color:#FFD700; border-top:2px solid #FFD700; }
 </style>
 </head>
 <body>
 
+<!-- MOVING WELCOME MESSAGE -->
+<div class="ticker">
+  <span>WELCOME TO DAVIDS LUXE ESTATE - YOUR NO.1 LUXURY REAL ESTATE COMPANY IN LAGOS - CALL US TODAY: 07026558433 -</span>
+</div>
+
+<!-- HEADER WITH CIRCULAR LOGO -->
 <header>
+  <div class="logo-circle">DL</div>
   <h1>DAVIDS LUXE ESTATE</h1>
-  <p>Luxury Properties in Lagos</p>
-  <a href="https://wa.me/234XXXXXXXXXX" class="btn">CHAT ON WHATSAPP</a>
+  <p>Luxury Properties in Lagos | Ikoyi | Banana Island | Lekki</p>
+  <a href="https://wa.me/2347026558433" class="btn">CHAT ON WHATSAPP NOW</a>
 </header>
 
+<!-- ABOUT ME -->
 <section>
+  <h2>About Me</h2>
+  <div class="about">
+    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600" alt="CEO DAVIDS LUXE ESTATE">
+    <div class="about-text">
+      <h3>David - CEO & Founder</h3>
+      <p>With over 8 years in luxury real estate, DAVIDS LUXE ESTATE has helped 200+ clients find their dream homes in Lagos. We specialize in high-end properties in Ikoyi, Banana Island, and Lekki. Our mission is simple: Deliver luxury, integrity, and results. When you choose us, you choose excellence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section style="background:#111;">
+  <h2>Why Clients Choose Us</h2>
+  <div class="why">
+    <div class="why-card"><h3>🏆 Luxury Expertise</h3><p>We only deal with premium properties worth ₦100M and above.</p></div>
+    <div class="why-card"><h3>🔒 Trusted & Verified</h3><p>All our listings are verified. No scam, no fake listings.</p></div>
+    <div class="why-card"><h3>⚡ Fast Service</h3><p>From inspection to closing, we make the process smooth and fast.</p></div>
+    <div class="why-card"><h3>🤝 24/7 Support</h3><p>We are available on WhatsApp and calls anytime you need us.</p></div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section>
+  <h2>Benefits of Choosing Us</h2>
+  <div class="why">
+    <div class="why-card"><h3>✓ Best Prices</h3><p>Direct access to owners. No middlemen, no extra charges.</p></div>
+    <div class="why-card"><h3>✓ Legal Support</h3><p>Free legal consultation on all property documents.</p></div>
+    <div class="why-card"><h3>✓ Private Tours</h3><p>Exclusive property inspections with luxury car service.</p></div>
+    <div class="why-card"><h3>✓ After Sales Service</h3><p>We help with renovation, property management, and resale.</p></div>
+  </div>
+</section>
+
+<!-- FEATURED PROPERTIES -->
+<section style="background:#111;">
   <h2>Featured Properties</h2>
-  
   <div class="grid">
-    
-    <!-- PROPERTY 1 - IKOYI -->
     <div class="card">
-      <img src="https://i.postimg.cc/RCjdMPTg/1000065031.jpg" alt="Ikoyi Luxury Villa">
+      <img src="1000065031.jpg" alt="Ikoyi Luxury Villa">
       <div class="card-content">
         <h3>Ikoyi Luxury Villa</h3>
         <p>5 Bedroom Duplex | Swimming Pool | Cinema | Smart Home</p>
-        <p class="price">₦400,000,000</p>
+        <p class="price">₦850,000,000</p>
         <a href="https://wa.me/2347026558433" class="btn">Book Inspection</a>
       </div>
     </div>
-
-    <!-- PROPERTY 2 - BANANA ISLAND -->
     <div class="card">
-      <img src="https://i.postimg.cc/QNWgnQrK/1000064803.png" alt="Banana Island Mansion">
+      <img src="1000064803.png" alt="Banana Island Mansion">
       <div class="card-content">
         <h3>Banana Island Mansion</h3>
         <p>6 Bedroom | Gym | Waterfront | 2 Cars Garage</p>
-        <p class="price">₦200,000,000</p>
+        <p class="price">₦1,200,000,000</p>
         <a href="https://wa.me/2347026558433" class="btn">Book Inspection</a>
       </div>
     </div>
+  </div>
+</section>
 
+<!-- TESTIMONIALS -->
+<section>
+  <h2>What Our Clients Say</h2>
+  <div class="testimonials">
+    <div class="testimonial">
+      "David found me my dream house in Ikoyi in just 2 weeks. Professional and trustworthy!"<br><br><b>- Mr. Adebayo, CEO</b>
+    </div>
+    <div class="testimonial">
+      "Best real estate company in Lagos. The service was top notch and very transparent."<br><br><b>- Mrs. Johnson, Banker</b>
+    </div>
+    <div class="testimonial">
+      "I bought my Banana Island mansion through DAVIDS LUXE. Zero stress. 10/10"<br><br><b>- Chief Okafor, Businessman</b>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section style="background:#111;">
+  <div class="contact">
+    <h2>Contact Us Today</h2>
+    <p>Ready to own your luxury home?</p>
+    <p class="contact-number">📞 0702 655 8433</p>
+    <a href="https://wa.me/2347026558433" class="btn">MESSAGE ON WHATSAPP</a>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 DAVIDS LUXE ESTATE | Lagos, Nigeria</p>
+  <p>© 2026 DAVIDS LUXE ESTATE | Lagos, Nigeria | Luxury Redefined</p>
 </footer>
 
 </body>
